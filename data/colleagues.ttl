@@ -1,0 +1,2517 @@
+@prefix sdo: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://doi.org/10.1007/978-3-031-60635-9_12> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2024-01-01"^^xsd:date ;
+    sdo:name "Enabling Social Demography Research Using Semantic Technologies" .
+
+<https://doi.org/10.1007/978-3-031-73741-1_2> a sdo:Chapter,
+        sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X>,
+        <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2024-10-31"^^xsd:date,
+        "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:aisola-knossos-greece-23-10-2023> ;
+    sdo:name "Common Language for Accessibility, Interoperability, and Reusability in Historical Demography",
+        "Common Language for Accessibility, Interoperability, and Reusability in Historical Demography" .
+
+<https://doi.org/10.1007/978-3-031-97043-6> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Innovation and Economic Development in Eurasia, 500 BCE-Present" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_1> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Introduction" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_10> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Well-Being Beyond GDP" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_11> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Future Research: A Long-Run Overview of Human and Economic Development in Northern Eurasia" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_2> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Income and Growth in the Ancient and Early Medieval World" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_3> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Further Medieval Economic Divergence: Technology Adoption in a Predominantly Agricultural World" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_4> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "The Change Towards Modern Growth: Proximate Causes" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_5> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "The Change to Modern Growth: Ultimate Causes (Technology, Institutions/Culture, and Geography)" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_6> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "The Spread of the Industrial Revolution, c. 1760–Present" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_7> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "State Intervention and Forced Industrialization in the Twentieth Century" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_8> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "The Effect of Government Expenditure and Monetary Expansion on Economic Growth" .
+
+<https://doi.org/10.1007/978-3-031-97043-6_9> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Catching Up and Falling Behind: Economic Growth in the Twentieth and Twenty-First Centuries" .
+
+<https://doi.org/10.1007/978-3-319-19884-2_2> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:population-reconstruction> ;
+    sdo:name "Dutch Historical Toponyms in the Semantic Web" .
+
+<https://doi.org/10.1007/978-3-319-47602-5_54> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-semantic-web> ;
+    sdo:name "An Ecosystem for Linked Humanities Data" .
+
+<https://doi.org/10.1007/s10645-012-9197-6> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:de-economist> ;
+    sdo:name "The Contribution of Migration to Economic Development in Holland 1570?1800" .
+
+<https://doi.org/10.1007/s11698-022-00252-x> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date,
+        "2023-05-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cliometrica> ;
+    sdo:name "Regional variation in the GDP per capita of colonial Indonesia, 1870–1930" .
+
+<https://doi.org/10.1007/s40797-023-00221-x> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2023-01-01"^^xsd:date,
+        "2024-03-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:italian-economic-journal> ;
+    sdo:name "Italy’s Total Factor Productivity in a Global Economy: Growth and Spillover Effects (c. 1400–2010)" .
+
+<https://doi.org/10.1016/j.aglobe.2022.100025> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:asia-and-the-global-economy> ;
+    sdo:name "Woman among women: Female agency in traditional Chinese households, circa 1947" .
+
+<https://doi.org/10.1016/j.dendro.2009.06.009> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2010-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dendrochronologia> ;
+    sdo:name "TRiDaS 1.1: The tree-ring data standard" .
+
+<https://doi.org/10.1016/j.eeh.2011.11.002> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:explorations-in-economic-history> ;
+    sdo:name "Persistent but not Consistent: The Growth of National Income in Holland 1347-1807" .
+
+<https://doi.org/10.1016/j.eeh.2012.08.004> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:explorations-in-economic-history> ;
+    sdo:name "When did Britain industrialise? The sectoral distribution of the labour force and labour productivity in Britain, 1381–1851" .
+
+<https://doi.org/10.1016/j.ehb.2022.101179> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679>,
+        <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2022-12-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economics-and-human-biology>,
+        <urn:orcidgraph:periodical:economics-human-biology> ;
+    sdo:name "Unequal excess mortality during the Spanish Flu pandemic in the Netherlands" .
+
+<https://doi.org/10.1016/j.hisfam.2008.05.004> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Introduction" .
+
+<https://doi.org/10.1016/j.hisfam.2008.05.007> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "The Urban Household in Russia and the Soviet Union, 1900-2000" .
+
+<https://doi.org/10.1016/j.rssm.2010.06.004> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2010-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:research-in-social-stratification-and-mobility> ;
+    sdo:name "Assortative mating by occupational status during early industrialization" .
+
+<https://doi.org/10.1016/j.ssmph.2023.101359> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2023-06-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:ssm-population-health> ;
+    sdo:name "Exploring familial factors in the migrant mortality advantage among domestic migrants in later life: Zeeland, the Netherlands, 1812–1962" .
+
+<https://doi.org/10.1017/9781108348485.015> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-cambridge-economic-history-of-china-vol-2-1800-to-the-present> ;
+    sdo:name "Education and human capital" .
+
+<https://doi.org/10.1017/S0020859016000523> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2016-12-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:international-review-of-social-history> ;
+    sdo:name "Conquerors, Employers and Arbiters: States and Shifts in Labour Relations, 1500-2000, Introduction" .
+
+<https://doi.org/10.1017/S0268416005005643> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2005-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:continuity-and-change> ;
+    sdo:name "Work and the household in the inter-war Soviet Union" .
+
+<https://doi.org/10.1017/S0268416005005692> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2005-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:continuity-and-change> ;
+    sdo:name "Structuring time, allocating labour: income-earning strategies of urban households in Russia and the Soviet Union: Introduction" .
+
+<https://doi.org/10.1017/s0268416009990166> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2009-11-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cont-change> ;
+    sdo:name "Like my father before me: intergenerational occupational status transfer during industrialization (Zeeland, 1811–1915)" .
+
+<https://doi.org/10.1038/s41467-018-07925-0> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2018-01-01"^^xsd:date,
+        "2019-01-01"^^xsd:date,
+        "2019-12-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:biorxiv>,
+        <urn:orcidgraph:periodical:nature-communications> ;
+    sdo:name "Longevity defined as top 10% survivors and beyond is transmitted as a quantitative genetic trait",
+        "Longevity defined as top 10% survivors is transmitted as a quantitative genetic trait: results from large three-generation datasets" .
+
+<https://doi.org/10.1057/ejdr.2015.59> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:european-journal-of-development-research>,
+        <urn:orcidgraph:periodical:the-european-journal-of-development-research> ;
+    sdo:name "How Do the Middle Class and the Poor Grow Apart? An Empirical Test of the Psychological Well-Being Pathway in Middle-Income Countries",
+        "How do the middle class and the poor grow apart? An empirical test of the psychological well-being pathway in middle-income countries" .
+
+<https://doi.org/10.1080/00074918.2016.1184226> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2017-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:bulletin-of-indonesian-economic-studies> ;
+    sdo:name "The development of inequality and poverty in Indonesia, 1932–2008" .
+
+<https://doi.org/10.1080/00324728.2020.1718186> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2018-01-01"^^xsd:date,
+        "2020-01-01"^^xsd:date,
+        "2021-01-01"^^xsd:date,
+        "2021-01-02"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:population-studies> ;
+    sdo:name "Families in Comparison: An individual-level comparison of life course and family reconstructions between population and vital event registers",
+        "Families in comparison",
+        "Families in comparison: An individual-level comparison of life-course and family reconstructions between population and vital event registers" .
+
+<https://doi.org/10.1080/01615440.2012.715569> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2013-01-01"^^xsd:date,
+        "2013-04-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-methods-a-journal-of-quantitative-and-interdisciplinary-history> ;
+    sdo:name "The Construction of HISCAM: A Stratification Scale Based on Social Interactions for Historical Comparative Research" .
+
+<https://doi.org/10.1080/01615440.2022.2027303> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date,
+        "2022-04-03"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-methods-a-journal-of-quantitative-and-interdisciplinary-history> ;
+    sdo:name "The regional occupational structure in interwar England and Wales" .
+
+<https://doi.org/10.1080/01615440.2024.2414925> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2025-01-02"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-methods-a-journal-of-quantitative-and-interdisciplinary-history> ;
+    sdo:name "Understanding patterns of engagement in the citizen humanities: The civil records of Suriname" .
+
+<https://doi.org/10.1080/02529203.2016.1241494> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:social-sciences-in-china> ;
+    sdo:name "Calculating China’s Historical Economic Aggregate: A GDP-centered Overview" .
+
+<https://doi.org/10.1080/08989621.2024.2383349> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2024-08-13"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:accountability-in-research> ;
+    sdo:name "Replication studies in the Netherlands: Lessons learned and recommendations for funders, publishers and editors, and universities" .
+
+<https://doi.org/10.1080/1081602X.2014.955517> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Digital Humanities and the History of Working Women" .
+
+<https://doi.org/10.1080/1081602X.2014.967266> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Working Women in France, Nineteenth and Twentieth Centuries." .
+
+<https://doi.org/10.1080/1081602X.2020.1740763> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-01-01"^^xsd:date,
+        "2020-07-02"^^xsd:date,
+        "2020-07-20"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:history-of-the-family>,
+        <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Intergenerational transmission of longevity is not affected by other familial factors",
+        "Intergenerational transmission of longevity is not affected by other familial factors: evidence from 16,905 Dutch families from Zeeland, 1812-1962" .
+
+<https://doi.org/10.1080/1081602x.2014.955517> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-10-02"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Digital humanities and the history of working women: a cascade" .
+
+<https://doi.org/10.1080/1081602x.2014.967266> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-10-02"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-history-of-the-family> ;
+    sdo:name "Working women in France, nineteenth and twentieth centuries. Where, when, and which women were in work at marriage?" .
+
+<https://doi.org/10.1080/13547860.2014.920592> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-the-asia-pacific-economy> ;
+    sdo:name "A Note on Height and Surnames: The Role of Networks" .
+
+<https://doi.org/10.1080/20780389.2016.1261629> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2017-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economic-history-of-developing-regions> ;
+    sdo:name "Human Capital in Republican and New China: Regional and Long-Term Trends" .
+
+<https://doi.org/10.1093/LLC/FQS046> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:literary-and-linguistics-computing> ;
+    sdo:name "Layer on layer. 'Computational archaeology' in 15th-century Middle Dutch historiography" .
+
+<https://doi.org/10.1093/llc/fqae038> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X>,
+        <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-scholarship-in-the-humanities> ;
+    sdo:name "Linked Data for modelling and replicating the knowledge production process in data-driven humanities research" .
+
+<https://doi.org/10.1093/llc/fqs046> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2013-01-01"^^xsd:date,
+        "2013-05-20"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:literary-and-linguistic-computing>,
+        <urn:orcidgraph:periodical:llc-the-journal-of-digital-scholarship-in-the-humanities> ;
+    sdo:name "Layer on layer. 'Computational archaeology' in 15th-century Middle Dutch historiography",
+        "Layer on layer. 'computational archaeology' in 15th-century middle dutch historiography",
+        "Layer on layer. ‘Computational archaeology’ in 15th-century Middle Dutch historiography" .
+
+<https://doi.org/10.1098/rsif.2026.0163> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2026-07-15"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-the-royal-society-interface> ;
+    sdo:name "Correcting collection bias in comparative studies of diversity" .
+
+<https://doi.org/10.1101/2020.09.18.303602> a sdo:CreativeWork,
+        sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-01-01"^^xsd:date,
+        "2020-09-20"^^xsd:date ;
+    sdo:name "Women born to older mothers have reduced fertility: Evidence from a natural fertility population" .
+
+<https://doi.org/10.1101/781500> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2019-10-01"^^xsd:date ;
+    sdo:name "Intergenerational transmission of longevity is not affected by other familial factors: Evidence from 16,905 Dutch families from Zeeland, 1812-1962" .
+
+<https://doi.org/10.1108/01443330810881259> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2008-06-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:int-j-of-soc-social-policy> ;
+    sdo:name "Intergenerational transfer of occupational status in nineteenth century Zeeland, The Netherlands" .
+
+<https://doi.org/10.1111/aehr.12227> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-11-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:australian-economic-history-review> ;
+    sdo:name "Fenjiashu: Economic development in the Chinese countryside based on household division inventories, ca. 1750–1910" .
+
+<https://doi.org/10.1111/ecot.12060/epdf> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economics-of-transition> ;
+    sdo:name "Inspiration vs. Perspiration in Economic Development of the Former Soviet Union and China (ca. 1920–2010)" .
+
+<https://doi.org/10.1111/ehr.12694> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-economic-history-review> ;
+    sdo:name "Clark's Malthus delusion: response to ‘Farming in England 1200–1800'" .
+
+<https://doi.org/10.1111/j.1468-0289.2011.00627.x> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-economic-history-review> ;
+    sdo:name "The Biological Standard of Living in Early Nineteenth-century West Africa: New Anthropometric Evidence for Northern Ghana and Burkina Faso" .
+
+<https://doi.org/10.1111/j.1475-4991.2011.00473.x> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:review-of-income-and-wealth> ;
+    sdo:name "Comparing per capita income in the Hellenistic world: the case of Mesopotamia" .
+
+<https://doi.org/10.1111/roiw.12014> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:review-of-income-and-wealth> ;
+    sdo:name "The Changing Shape of Global Inequality 1820-2000 Exploring a new dataset" .
+
+<https://doi.org/10.1145/3615887.3627756> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2023-01-01"^^xsd:date,
+        "2023-11-13"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:geohumanities-2023-proceedings-of-the-7th-acm-sigspatial-international-workshop-on-geospatial-humanities> ;
+    sdo:name "Conflating Historical Population Statistics Using a Historical GIS with a Flexible Semantic Model for Premodern Administrative Units in the Low Countries",
+        "Conflating Historical Population Statistics Using a Historical GIS with a Flexible Semantic Model for Premodern Administrative Units in the Low Countries: The (Re)counting the Uncounted and Historical Atlas of the Low Countries Projects" .
+
+<https://doi.org/10.1162/JINH_a_00976> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-journal-of-interdisciplinary-history> ;
+    sdo:name "Economic mobility in a colonial and post-colonial economy: the case of Indonesia." .
+
+<https://doi.org/10.1163/24523666-bja10026> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-10-17"^^xsd:date,
+        "2023-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:research-data-journal-for-the-humanities-and-social-sciences> ;
+    sdo:name "The Occupational Structure of England and Wales: the 1939 National Register" .
+
+<https://doi.org/10.1163/24523666-bja10033> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2023-01-01"^^xsd:date,
+        "2023-12-04"^^xsd:date,
+        "2023-12-11"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:research-data-journal-for-the-humanities-and-social-sciences> ;
+    sdo:name "Historical Atlas of the Low Countries: A GIS Dataset of Locality-Level Boundaries (1350–1800)",
+        "Historical Atlas of the Low Countries: A gis Dataset of Locality-Level Boundaries (1350–1800)" .
+
+<https://doi.org/10.1163/9789004442252> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-quantitative-economic-history-of-china> ;
+    sdo:name "Education in China, ca. 1840-present" .
+
+<https://doi.org/10.11647/OBP.0323.14> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2023-02-21"^^xsd:date ;
+    sdo:name "2.1.2 Demographic Change in Modern History (ca. 1800–1900)" .
+
+<https://doi.org/10.1484/J.MLC.5.103715> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2015-05-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-medieval-low-countries-an-annual-review> ;
+    sdo:name "Leydis, Pauli, and Berchen revisited. Collective history writing in the Low Countries in the late fifteenth century" .
+
+<https://doi.org/10.1484/j.mlc.5.103715> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:name "Leydis, Pauli, and Berchen Revisited. Collective History Writing in the Low Countries in the Late Fifteenth Century" .
+
+<https://doi.org/10.1556/032.2018.68.3.6> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:acta-oeconomica> ;
+    sdo:name "Publishing ideas: The factors determining the number of book titles" .
+
+<https://doi.org/10.1556/AOecon.61.2011.2.3> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:acta-oeconomica> ;
+    sdo:name "Capital accumulation and growth in Hungary, 1924-2006" .
+
+<https://doi.org/10.1556/AOecon.65.2015.1.2> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:acta-oeconomica> ;
+    sdo:name "Capital formation and economic growth under central planning and transition: A theoretical and empirical analysis, ca. 1920–2008" .
+
+<https://doi.org/10.1787/3d96efc5-en> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:how-was-life-volume-ii-new-perspectives-on-well-being-and-global-inequality-since-1820> ;
+    sdo:name "Inequality in educational achievement" .
+
+<https://doi.org/10.1787/9789264214262-en> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:how-was-life-global-well-being-since-1820> ;
+    sdo:name "Education Since 1820",
+        "Income Inequality since 1820",
+        "Real Wages since 1820" .
+
+<https://doi.org/10.18352/tseg.1022> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2018-01-01"^^xsd:date,
+        "2018-12-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:tijdschrift-voor-sociale-en-economische-geschiedenis> ;
+    sdo:name "Coin Production in the Low Countries: Fourteenth Century to the Present",
+        "Coin production in the low countries: Fourteenth century to the present" .
+
+<https://doi.org/10.18352/tseg.918> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2017-06-22"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:tijdschrift-voor-sociale-en-economische-geschiedenis> ;
+    sdo:name "Life Expectancy at Birth" .
+
+<https://doi.org/10.21827/groniek.232.41081> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2023-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:groniek-historisch-tijdschrift> ;
+    sdo:name "Het uiteenvallen van de Sovjet-Unie. Verleden, heden en toekomst?" .
+
+<https://doi.org/10.31235/osf.io/7cb3a> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2019-04-30"^^xsd:date ;
+    sdo:name "Geographic clustering of longevity in a Dutch province, 1812-1962: How stable, behavior-associated environmental characteristics explain the local clustering of longevity" .
+
+<https://doi.org/10.3233/SSW200036> a sdo:Chapter,
+        sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-01-01"^^xsd:date,
+        "2020-04-06"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:applications-and-practices-in-ontology-design-extraction-and-reasoning>,
+        <urn:orcidgraph:periodical:arxiv-preprint> ;
+    sdo:name "CLARIAH: Enabling Interoperability Between Humanities Disciplines with Ontologies",
+        "Ontologies in CLARIAH" .
+
+<https://doi.org/10.3233/ssw200036> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2020-11-13"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:applications-and-practices-in-ontology-design-extraction-and-reasoning> ;
+    sdo:name "CLARIAH: Enabling Interoperability Between Humanities Disciplines with Ontologies" .
+
+<https://doi.org/10.4054/demres.2010.23.33> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2010-07-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:demres> ;
+    sdo:name "Beyond the local marriage market" .
+
+<https://doi.org/10.4233/UUID:3EE91C09-E616-4E23-BB85-BE4D6738048B> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:name "Open Maps: New Research Directions and Workflows for Digitized Historical Cartographic Material" .
+
+<https://doi.org/10.4324/9780429200632> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-famine-resilience> ;
+    sdo:name "Responses to famines in core regions of antiquity compared" .
+
+<https://doi.org/10.4324/9780429353130> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2023-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-utrecht-chronicle-of-the-teutonic-order-a-history-of-the-crusades-in-the-holy-land-prussia-and-livonia-edition-and-translation> ;
+    sdo:name "The Utrecht chronicle of the Teutonic order: A history of the Crusades in the Holy Land, Prussia and Livonia (edition and translation)" .
+
+<https://doi.org/10.5117/9789463726139> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:constructing-and-representing-territory-in-late-medieval-and-early-modern-europe> ;
+    sdo:name "Demographic Shifts and the Politics of Taxation in the Making of Fifteenth-Century Brabant" .
+
+<https://doi.org/10.51964/hlcs14685> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2023-01-05"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "LINKS. A System for Historical Family Reconstruction in the Netherlands" .
+
+<https://doi.org/10.51964/hlcs19312> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679>,
+        <https://orcid.org/0000-0003-0165-8341>,
+        <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2024-10-17"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "Persons in Context. A Model to Represent Observations and Reconstructions of Historical Persons in Linked Data" .
+
+<https://doi.org/10.51964/hlcs9310> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "From matched certificates to related persons" .
+
+<https://doi.org/10.51964/hlcs9556> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2021-03-31"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "Not Like Everbody Else" .
+
+<https://doi.org/10.51964/hlcs9578> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2021-03-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "Women Born to Older Mothers Have Reduced Fertility. Evidence From a Natural Fertility Population" .
+
+<https://doi.org/10.51964/hlcs9584> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679>,
+        <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2021-03-01"^^xsd:date,
+        "2021-03-31"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "Retracing Hotbeds of the 1918–19 Influenza Pandemic",
+        "Retracing Hotbeds of the 1918–19 Influenza Pandemic. Spatial Differences in Seasonal Excess Mortality in the Netherlands" .
+
+<https://doi.org/10.5281/zenodo.17136092> a sdo:Report ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2025-09-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:coordinating-the-european-research-area-the-role-of-erics-and-national-stakeholders-strengthening-the-social-sciences-and-humanities-the-hague-netherlands-27-11-2024> ;
+    sdo:name "Coordinating the European Research Area: the role of ERICs and national stakeholders - strengthening the Social Sciences and Humanities" .
+
+<https://doi.org/10.5281/zenodo.7875707> a sdo:Report ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:name "End report ‘Historical Sample of the Netherlands’ (HSN task 2.3) within the ODISSEI roadmap project" .
+
+<https://doi.org/10.55283/jhk.14640> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2024-10-02"^^xsd:date,
+        "2024-12-06"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-for-the-history-of-knowledge> ;
+    sdo:name "To Map, To Ascertain. Reflections on the Practice of Mapping (Un)certain Knowledge from a Digital Humanities Perspective" .
+
+<https://doi.org/10.5860/ital.v44i4.17432> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2025-12-15"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:information-technology-and-libraries> ;
+    sdo:name "From Linked Open Data to Collections as Data" .
+
+<https://doi.org/10.64898/2025.12.15.25342287> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2025-12-16"^^xsd:date ;
+    sdo:name "Beyond Mortality: The Importance of Morbidity Data for Understanding Pandemics - The Case of the 1918–1920 Influenza Pandemic in Switzerland" .
+
+<https://doi.org/https://doi.org/10.4324/9780429200632> a sdo:Chapter,
+        sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-famine-resilience>,
+        <urn:orcidgraph:periodical:routledge-explorations-in-economic-history> ;
+    sdo:name "An Economic History of Famine Resilience",
+        "Resilience to famine ca. 600 BC to present: An introduction" .
+
+<https://doi.org/https://www.sciencedirect.com/science/article/pii/S1570677X12000706?via%3Dihub> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economics-human-biology> ;
+    sdo:name "Indonesia’s regional welfare development, 1900-1990: new anthropometric evidence" .
+
+<https://orcid.org/0000-0001-6394-260X/funding/1035586> a sdo:MonetaryGrant ;
+    sdo:fundedItem <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:funder <http://dx.doi.org/10.13039/501100003246> ;
+    sdo:identifier "401.19.038" ;
+    sdo:name "(Re)counting the uncounted. Replication and Contextualisation of Dutch and Belgian Premodern Population Estimates (1350-1800)" .
+
+<https://orcid.org/0000-0001-6394-260X/funding/1384645> a sdo:MonetaryGrant ;
+    sdo:fundedItem <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:funder <http://dx.doi.org/10.13039/501100003246> ;
+    sdo:identifier "203.001.166" ;
+    sdo:name "Common Language for Accessibility, Interoperability, and Reusability in Historical Demography (CLAIR-HD)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/100722708> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2021-06-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:holland-historisch-tijdschrift> ;
+    sdo:name "Reconstructie van de Grote Waard, 1421" .
+
+<https://orcid.org/0000-0001-6394-260X/work/121459459> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2021-07-14"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:macht-bezit-en-ruimte-opstellen-over-de-noordelijke-nederlanden-in-de-middeleeuwen> ;
+    sdo:name "Een rekenoefening in drie akten. Bevolking, priesters en hun herkomst in het bisdom Utrecht (begin zestiende eeuw)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664144> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:military-orders-vol-5-politics-and-power> ;
+    sdo:name "Power to the Educated? Priest-brethren and their Education, using Data from the Utrecht Bailiwick of the Teutonic Order (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664680> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:name "Medieval authorship and cultural exchange in the late fifteenth century" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664681> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:schriftlichkeit-im-preussenland> ;
+    sdo:name "Preußen und die frühe Verbreitung der \"Jüngeren Hochmeisterchronik\"" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664682> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:schriftlichkeit-im-preussenland> ;
+    sdo:name "Preußen und die frühe Verbreitung der „Jüngeren Hochmeisterchronik“" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664683> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:schriftlichkeit-im-preussenland> ;
+    sdo:name "Preußen und die frühe Verbreitung der \"Jüngeren Hochmeisterchronik\"" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664685> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:priester-im-deutschen-orden> ;
+    sdo:name "Priest-brethren in the Utrecht bailiwick, their superiors and their ties to the community" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664686> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:priester-im-deutschen-orden-herausgegeben-von-udo-arnold> ;
+    sdo:name "Priest-brethren in the Utrecht bailiwick, their superiors and their ties to the community" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134664818> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:name "The development of a medieval scribe" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134665376> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:name "The development of a medieval scribe" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134665397> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:schriftlichkeit-im-preu-enland> ;
+    sdo:name "Preußen und die frühe Verbreitung der „Jüngeren Hochmeisterchronik“. Kulturelle Verbindungen zwischen Utrecht, Königsberg und Mergentheim (um 1480–1530)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/134665451> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:priester-im-deutschen-orden-herausgegeben-von-udo-arnold> ;
+    sdo:name "Priest-brethren in the Utrecht bailiwick, their superiors and their ties to the community" .
+
+<https://orcid.org/0000-0001-6394-260X/work/14501310> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:analecta-theutonica-studies-for-the-history-of-the-teutonic-order> ;
+    sdo:name "Priests in the military orders. A prosopographical survey of the priest-brethren in the Utrecht bailiwick of the Teutonic Order (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/14501311> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:military-orders-5-politics-and-power> ;
+    sdo:name "Power to the educated? Priest-brethren and their education, using data of the Utrecht bailiwick of the Teutonic Order, 1350-1600" .
+
+<https://orcid.org/0000-0001-6394-260X/work/14501313> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:jaarboek-voor-middeleeuwse-geschiedenis> ;
+    sdo:name "'Onder dese ridderen zijn oec papen'. De priesterbroeders in de balije Utrecht van de Duitse Orde (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/178885953> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2025-01-23"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:lordship-and-the-decentralized-state-in-late-medieval-europe> ;
+    sdo:name "Lordship in Medieval Holland and Zeeland" .
+
+<https://orcid.org/0000-0001-6394-260X/work/57521504> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-military-orders-volume-5-politics-and-power> ;
+    sdo:name "Power to the educated? Priest-brethren and their education, using data from the utrecht bailiwick of the teutonic order (1350–1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/57521505> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-military-orders-volume-5-politics-and-power> ;
+    sdo:name "Power to the educated? Priest-brethren and their education, using data from the Utrecht bailiwick of the Teutonic order (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797701> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-military-orders-5-politics-and-power> ;
+    sdo:name "Power to the educated? Priest-brethren and their education, using data of the Utrecht bailiwick of the Teutonic Order, 1350-1600" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797702> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:jaarboek-voor-middeleeuwse-geschiedenis> ;
+    sdo:name "`Onder dese ridderen zijn oec papen'. De priesterbroeders in de balije Utrecht van de Duitse Orde (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797706> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:analecta-theutonica-studies-for-the-history-of-the-teutonic-order> ;
+    sdo:name "Priests in the military orders. A prosopographical survey of the priest-brethren in the Utrecht bailiwick of the Teutonic Order (1350-1600)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797708> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:priester-im-deutschen-orden> ;
+    sdo:name "Priest-brethren in the Utrecht bailiwick, their superiors and their ties to the community" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797709> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2015-06-30"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:kodikologie-und-pal-ographie-im-digitalen-zeitalter-codicology-and-palaeography-in-the-digital-age> ;
+    sdo:name "The development of a medieval scribe" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797712> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2017-06-21"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:heerlijkheden-in-holland> ;
+    sdo:name "Kaart van het Graafschap Holland (1795)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797713> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2017-06-21"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:heerlijkheden-in-holland> ;
+    sdo:name "Archievenoverzicht van heerlijkheden en legenda bij de kaart van het Graafschap Holland (1795)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797714> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2017-12-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:holland-historisch-tijdschrift> ;
+    sdo:name "Holland rond 1500. Een geografische verkenning van de Enqueste (1494) en Informacie (1514)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/72797715> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2015-10-26"^^xsd:date ;
+    sdo:name "The Global Collaboratory on the History of Labour Relations, 1500-2000: Background, Set-Up, Taxonomy, and Applications" .
+
+<https://orcid.org/0000-0001-6394-260X/work/86391218> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:schriftlichkeit-im-preu-enland> ;
+    sdo:name "Preußen und die frühe Verbreitung der „Jüngeren Hochmeisterchronik“. Kulturelle Verbindungen zwischen Utrecht, Königsberg und Mergentheim (um 1480–1530)" .
+
+<https://orcid.org/0000-0001-6394-260X/work/87174488> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-6394-260X> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-military-religious-orders-history-sources-and-memory> ;
+    sdo:name "Medieval Authorship and Cultural Exchange in the Late Fifteenth Century: The Utrecht Chronicle of the Teutonic Order" .
+
+<https://orcid.org/0000-0001-7817-5298/work/100722724> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-cambridge-economic-history-of-the-modern-world-volume-1-1700-1870> ;
+    sdo:name "Consequences of growth: Living standards and inequality" .
+
+<https://orcid.org/0000-0001-7817-5298/work/103193030> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:australian-economic-history-review> ;
+    sdo:name "Fenjiashu: Economic development in the Chinese countryside based on household division inventories, ca. 1750–1910" .
+
+<https://orcid.org/0000-0001-7817-5298/work/106095958> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:mpra-paper> ;
+    sdo:name "Regional sentiments in Covid tweets in the Netherlands before and during peak infections" .
+
+<https://orcid.org/0000-0001-7817-5298/work/113111498> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:northeast-asia-in-focus-life-work-and-industry-between-the-steppe-and-the-metropoles-1900-2020> ;
+    sdo:name "The integration of ethnic Koreans in Yanbian Prefecture (China), ca. 1890‒present" .
+
+<https://orcid.org/0000-0001-7817-5298/work/120098943> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cage-online-working-paper-series> ;
+    sdo:name "British business cycles, 1270-1870" .
+
+<https://orcid.org/0000-0001-7817-5298/work/121459481> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:archaeological-and-anthropological-sciences> ;
+    sdo:name "Coin diffusion patterns in the Seleucid Empire: a statistical analysis" .
+
+<https://orcid.org/0000-0001-7817-5298/work/126095258> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-asian-history> ;
+    sdo:name "Mining for Money: A Microstudy on Government Intervention in the Operation of Lianhua Zinc Mine in Qing China" .
+
+<https://orcid.org/0000-0001-7817-5298/work/126095259> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:nog-meer-wereldgeschiedenis-van-nederland> ;
+    sdo:name "1904: Investeringen tijdens globalisering: Pieter Bakels zoekt goud in China" .
+
+<https://orcid.org/0000-0001-7817-5298/work/131853804> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2023-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:handbook-of-industrial-development> ;
+    sdo:name "Industrial revolutions in a globalizing world, 1760–present" .
+
+<https://orcid.org/0000-0001-7817-5298/work/150285319> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2023-01-01"^^xsd:date ;
+    sdo:name "Socio-economic characteristics as determinants in the job market: The case of Piedmont in Italy (1867–2005)" .
+
+<https://orcid.org/0000-0001-7817-5298/work/171178299> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2024-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-journal-of-european-economic-history> ;
+    sdo:name "“Time in Office” of City Mayors and Economic Convergence, c. 1870-Present" .
+
+<https://orcid.org/0000-0001-7817-5298/work/173634797> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2024-12-19"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-quantitative-economic-history-of-china> ;
+    sdo:name "Chinese Household Registration Data of Wudu County (Gansu Province), 1947" .
+
+<https://orcid.org/0000-0001-7817-5298/work/175174265> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2024-12-19"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-quantitative-economic-history-of-china> ;
+    sdo:name "Chinese Household Registration Data of Wudu County (Gansu Province), 1947" .
+
+<https://orcid.org/0000-0001-7817-5298/work/175174266> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2024-12-19"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-quantitative-economic-history-of-china> ;
+    sdo:name "Chinese Household Registration Data of Wudu County (Gansu Province), 1947" .
+
+<https://orcid.org/0000-0001-7817-5298/work/178886019> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2024-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-interdisciplinary-history> ;
+    sdo:name "Allocating uncertain occupational titles in census data: the 1939 National Register of England and Wales" .
+
+<https://orcid.org/0000-0001-7817-5298/work/191490538> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cliometrica> ;
+    sdo:name "British Business Cycles, 1270-1870" .
+
+<https://orcid.org/0000-0001-7817-5298/work/194309124> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:global-economic-history-series-the-quantitative-economic-history-of-china> ;
+    sdo:name "Chinese Household Registration Data of Yugan County (Jiangxi Province), ca. 1947" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892872> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-eurasian-studies> ;
+    sdo:name "The spread of human capital in the former Sovjet Union aresa in a comparative perspective:Exploring a new dataset" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892873> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:technol-giai-fejlod-s-s-int-zm-nyek-competitio-k-nyvek> ;
+    sdo:name "Teljes termelési tényezo hatékonyság Magyarországon: történeti idosorok empirikus elemzése" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892874> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:applied-economics-letters> ;
+    sdo:name "An Alternative Interpretation of \"average years of education\" in growth regressions" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892876> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:education-economics> ;
+    sdo:name "Should less inequality in education lead to a more equal income distribution?" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892877> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-08-21"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Market Performance in Early Economies: Concepts and Empirics: With an Application to Babylon." .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892878> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cliometrica> ;
+    sdo:name "Educational and Income Inequality in Europe, ca. 1870-2000" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892881> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:long-term-quantification-in-ancient-history> ;
+    sdo:name "Quantifying the Integration of the Babylonian Economy in the Mediterranean World Using a New Corpus of Price Data, 400-50 BC" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892882> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2007-06-14"^^xsd:date ;
+    sdo:name "Human capital and economic growth in India, Indonesia, and Japan. A quantitave analysis, 1890-2000" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892883> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:eastern-european-economics> ;
+    sdo:name "Capital accumulation and growth in Central Europe, 1920-2006" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892884> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:eastern-european-economics> ;
+    sdo:name "Average years of education in Hungary: annual estimates 1920-2006" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892885> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:post-communist-economies> ;
+    sdo:name "How much human capital does Eastern Europe have? Measurement methods and results" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892886> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:asian-economic-journal> ;
+    sdo:name "Human Capital and Economic Growth in Asia 1890-2000: a time-series analysis" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892888> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:journal-of-global-history> ;
+    sdo:name "Markets in pre-industrial societies: storage in Hellenistic Babylonia in the medieval English mirror" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892889> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:european-journal-of-science-and-theology> ;
+    sdo:name "Where Do Ideas Come from?" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892891> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:statisztikai-szemle-hungarian-statistical-review> ;
+    sdo:name "A magyar lakosság átlagos iskolázottságának becslése, 1920-2006" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892892> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Risk Aversion and Storage in Autarkic Societies" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892893> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Growing Silver and Changing Prices:" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892894> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:routledge-explorations-in-economic-history> ;
+    sdo:name "A History of Market Performance" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892895> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "An Introduction" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892896> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Markets from Babylon to Belfast" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892897> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2006-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:eastern-european-economics> ;
+    sdo:name "An Estimation of the Human Capital Stock in Eastern and Central Europe" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892898> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Long-run Patterns in Market Performance in the Near East, the Mediterranean and Europe from Antiquity to c. AD 1800" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892899> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-history-of-market-performance> ;
+    sdo:name "Climate, War and Economic Development: the Case of Second-century BC Babylon" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892900> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:qingshi-luncong> ;
+    sdo:name "19 Shiji Zhongguo Dazhong Shizhilv De Zaigusuan" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892901> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:name "British Economic Growth 1270-1870" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892904> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:zhongguo-shehui-kexue-social-science-in-china> ;
+    sdo:name "Zhongguo Lishi Shiqi Jingji Zongliang Guzhi Yanjiu: Yi GDP De Cesuan Wei Zhongxin" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892905> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:researches-in-chinese-economic-history> ;
+    sdo:name "Nongye Geming De Lianghua: Ping Shi Zhihong <Qingdai Nongye Shengchan Zhibiao De Guji>" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892908> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economic-history-review> ;
+    sdo:name "How did women count?" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892909> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cliometrica> ;
+    sdo:name "What can price volatility tell us about market efficiency?" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892910> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:researches-in-chinese-economic-history> ;
+    sdo:name "Zhongguo Gongye de Changqi Biaoxian jiqi Quanqiu Bijiao:1850-2010Nian-Yi Zengjiazhi Hesuan wei Zhongxin" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892911> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:mpra-working-paper> ;
+    sdo:name "Chinese National Income, ca. 1661–1933" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892913> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:silver-money-and-credit> ;
+    sdo:name "Silverization of China during the Ming-Qing Transition (ca. 1550-1700) and the Consequences for Research into the Babylonian Economy" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892915> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:china-economist> ;
+    sdo:name "China in World Industrialization" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892918> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:munich-personal-repec-archive> ;
+    sdo:name "Human Capital in Qing China: Economic Determinism or a History of Failed Opportunities?" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892919> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:global-coe-hi-stat-discussion-paper-series> ;
+    sdo:name "Inspiration and Perspiration Factors in Economic Growth: The Former Soviet Union Area versus China (ca.1920-2010)" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892920> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2017-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:australian-economic-history-review> ;
+    sdo:name "Chinese National Income, ca. 1661–1933" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892921> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "The Character of growth before 'modern economics growth'? The GDP of Holland between 1347 and 1807" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892922> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cepr-discussion-papers> ;
+    sdo:name "Long-run patterns in market efficiency and the genesis of the market economy: Markets around the Mediterranean from Nebuchadnezzar to Napoleon (580 BC and 1800AD)" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892923> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:munich-personal-repec-archive> ;
+    sdo:name "Regional human capital in Republican and New China: Its spread, quality and effects on economic growth" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892924> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "The standard of living in ancient societies: a comparison between the Han Empire, the Roman Empire, and Babylonia" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892925> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:iza-discussion-papers> ;
+    sdo:name "A Note on Height and Surnames: The Role of Networks" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892926> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "A dataset on human capital in the former Soviet Union area; Sources, methods, and first results" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892927> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:university-of-kent-school-of-economics-discussion-papers> ;
+    sdo:name "British Economic Growth, 1270-1870: an output-based approach" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892928> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "Where do ideas come from? Book production and patents in global and temporal perspective" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892929> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:mpra-paper> ;
+    sdo:name "Education as a driver of income inequality in twentieth-century Africa" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892930> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "The Development of inequality and poverty in Indonesia, 1932-1999" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892931> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "The contribution of migration to economic development in Holland and the Netherlands 1510-1900" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892932> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "The Changing Shape of Global Inequality 1820-2000: Exploring a new dataset" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892933> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cgeh-working-paper-series> ;
+    sdo:name "Markets in pre-industrial societies:storage in Hellenistic Babylonia in the English mirror" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892934> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2017-12-22"^^xsd:date ;
+    sdo:name "Drivers of industrialisation: intersectoral evidence from the Low Countries in the nineteenth century" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892935> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:cai-jing-guo-jia-zhou-kan-china-financial-weekly> ;
+    sdo:name "中国工业转型需要新红利" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892937> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:routledge-explorations-in-economic-history> ;
+    sdo:name "Money, Currency and Crisis: In Search of Trust, 2000 BC to AD 2000" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892938> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> ;
+    sdo:name "Money and Trust" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892939> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> ;
+    sdo:name "Introducing coinage: Comparing the Greek world, the Near East and China" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892940> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> ;
+    sdo:name "The introduction of coinage in the Seleucid Empire and the Euro in the European Union: A comparison of stock and velocity" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892941> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> ;
+    sdo:name "Stagnation is silver, but growth is gold: China’s silver period, circa 1430–1935" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892942> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> ;
+    sdo:name "Conclusion: In search of trust" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892944> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:frontiers-of-economics-in-china> ;
+    sdo:name "Urbanization in China, ca. 1100–1900" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892946> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:china-in-the-local-and-global-economy> ;
+    sdo:name "China as a Nation" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892947> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:economic-and-social-history-review> ;
+    sdo:name "汉代中国、罗马帝国东部和巴比伦尼亚社会生活水平的比较 (The Standard of Living in Ancient Societies: A Comparison between the Han Empire, the Eastern Roman Empire and Babylonia)" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892948> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:australian-economic-history-review> ;
+    sdo:name "A View of the Occupational Structure in Imperial and Republican China (1640–1952)" .
+
+<https://orcid.org/0000-0001-7817-5298/work/79892950> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:regional-economic-development-and-history> ;
+    sdo:name "Spatial-economic development: The effect of urbanisation on education in China, 1890–present" .
+
+<https://orcid.org/0000-0001-7817-5298/work/86391235> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:routledge-explorations-in-economic-history> ;
+    sdo:name "An Economic History of Regional Industrialization" .
+
+<https://orcid.org/0000-0001-7817-5298/work/86391236> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-regional-industrialization> ;
+    sdo:name "Regional industrialization: evidence on industry agglomeration" .
+
+<https://orcid.org/0000-0001-7817-5298/work/86391237> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-regional-industrialization> ;
+    sdo:name "Regional industrialization in China: the Yangtze and Zhujiang regions" .
+
+<https://orcid.org/0000-0001-7817-5298/work/86391238> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-regional-industrialization> ;
+    sdo:name "Global patterns of regional industrialization" .
+
+<https://orcid.org/0000-0001-7817-5298/work/86452396> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:an-economic-history-of-regional-industrialization> ;
+    sdo:name "Regional industrialization in China: the basic metals sector" .
+
+<https://orcid.org/0000-0001-7817-5298/work/94401915> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-economic-history-of-central-east-and-south-east-europe-1800-to-the-present> ;
+    sdo:name "Population, living standards and well-being, 1949–1989" .
+
+<https://orcid.org/0000-0001-7817-5298/work/95458402> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-economic-history-of-central-east-and-south-east-europe-1800-to-the-present> ;
+    sdo:name "Population, living standards and well-being since 1989" .
+
+<https://orcid.org/0000-0001-7817-5298/work/95458403> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0001-7817-5298> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:markets-and-exchanges-oin-pre-modern-and-traditional-societies> ;
+    sdo:name "Market performance in the grain market of late medieval Western Europe (ca. 1300-1650)" .
+
+<https://orcid.org/0000-0002-2267-1679/work/126851972> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:ceur-workshop-proceedings> ;
+    sdo:name "Linking Dutch civil certificates" .
+
+<https://orcid.org/0000-0002-2267-1679/work/170746535> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2024-07-09"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:ceur-workshop-proceedings> ;
+    sdo:name "FAIR Paper" .
+
+<https://orcid.org/0000-0002-2267-1679/work/47436016> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2017-01-01"^^xsd:date ;
+    sdo:name "Later-life mortality and longevity in late-18th and 19th-century cohorts. Where are we now, and where are we heading?" .
+
+<https://orcid.org/0000-0002-2267-1679/work/47436514> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2010-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:gouda-jso> ;
+    sdo:name "Gezinsopvang voor jonge moeders met hun kind: Inventarisatie van mogelijkheden en beperkingen [Family support for young mothers with their child: Inventory of possibilities and restrictions]" .
+
+<https://orcid.org/0000-0002-2267-1679/work/47436515> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2017-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:https-doi-org-10-17026-dans-zap-qxmc> ;
+    sdo:name "HISCO - OCC1950 Crosswalk" .
+
+<https://orcid.org/0000-0002-2267-1679/work/47436516> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:https-doi-org-10-17026-dans-27b-t9u2> ;
+    sdo:name "Zeelieden en krediet in de negentiende eeuw" .
+
+<https://orcid.org/0000-0002-2267-1679/work/88682159> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-2267-1679> ;
+    sdo:datePublished "2020-04-06"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:arxiv> ;
+    sdo:name "Ontologies in CLARIAH" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044249> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:working-on-labor-essays-in-honor-of-jan-lucassen> ;
+    sdo:name "Wage Labor and the Household Economy: a Russian Perspective, 1600-2000" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044250> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:international-and-comparative-social-history> ;
+    sdo:name "A Dream Deferred: New Studies in Russian and Soviet Labour History" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044251> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:labour-matters-towards-global-histories-studies-in-honour-of-sabyasachi-bhattacharya> ;
+    sdo:name "The Rural–Urban Nexus in Russian Labour History, 1860s–1930s: Suggestions for a Global, Comparative Perspective" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044252> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2007-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:enzyklop-die-migration-in-europa-vom-17-jahrhundert-bis-zur-gegenwart> ;
+    sdo:name "Russische und ukrainische Saisonarbeitskräfte in den Getreideanbaugebieten Neurußlands und des nördlichen Kaukasus im späten 19. und frühen 20. Jahrhundert" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044254> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:migration-and-membership-regimes-in-global-and-historical-perspective> ;
+    sdo:name "Migration and Membership Regimes in Global and Historical Perspective: An Introduction" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044255> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:technology-skills-and-the-pre-modern-economy-in-the-east-and-west-essays-dedicated-to-the-memory-of-s-r-epstein> ;
+    sdo:name "Labour Relations, Efficiency and the Great Divergence: Comparing Pre-industrial Brick-making across Eurasia, 1500-2000" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044257> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:hunger-by-design-the-great-ukrainian-famine-and-its-soviet-context> ;
+    sdo:name "The 1932-1933 Crisis and Its Aftermath beyond the Epicenters of Famine: The Urals Region" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044258> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-dream-deferred-new-studies-in-russian-and-soviet-labour-history> ;
+    sdo:name "A Population under Pressure. Household Responses to Demographic and Economic Shock in the Inter-War Soviet Union." .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044259> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:proletarian-and-gendered-mass-migrations-a-global-perspective-on-continuities-and-discontinuities-from-the-19th-to-the-21st-centuries> ;
+    sdo:name "Migration and Family Systems in Russia and the Soviet Union, Nineteenth to Twentieth Centuries" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044262> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2010-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:agrarnaia-sfera-v-kontekste-rossiiskikh-modernizatsii-xviii-xx-vekov-makro-i-mikroprotsessy-sbornik-statei> ;
+    sdo:name "Polukrest'iane ili poluproletarii? Migratsiia krest'ian na zarabotki i proletarizatsiia v Rossii v sravnitel'noi i dlitel'noi perspektive" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044263> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:ekonomicheskaia-istoriia-obozrenie> ;
+    sdo:name "Sovetskoe nasledie v sotsial'nykh i ekonomicheskikh praktikakh sovremennoi Rossii" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044264> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2013-01-01"^^xsd:date ;
+    sdo:name "Migration and Membership Regimes in Global and Historical Perspective" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044266> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2010-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:sotsial-naia-istorii-rossii-xx-veka> ;
+    sdo:name "\"Sovetskoe nasledstvo\". Otrazhenie proshlogo v sotsial'nykh i ekonomicheskikh praktikakh sovremennoi Rossii" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044267> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2011-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-encyclopedia-of-migration-and-minorities-in-europe-from-the-seventeenth-century-to-the-present> ;
+    sdo:name "Russian and Ukrainian Seasonal Laborers in the Grain Belt of New Russia and the North Caucasus in the Late 19th and Early 20th Centuries" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044268> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2012-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:russia-in-motion-politics-society-and-the-culture-of-human-mobility-1850-present> ;
+    sdo:name "The Origins of Soviet Internal-Migration Policy: Industrialization and the 1930s Rural Exodus." .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044270> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2015-01-01"^^xsd:date ;
+    sdo:name "Electronic repository for Russian Historical Statistics" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044271> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:globalising-migration-history-the-eurasian-experience-16th-21st-centuries> ;
+    sdo:name "Measuring Migration in Russia: A Perspective of Empire, 1500-1900" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044272> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:a-usable-collection> ;
+    sdo:name "Sources for Writing the History of Russia and the Soviet Union. National and Transnational Perspectives" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044279> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:hermitage-magazine> ;
+    sdo:name "Builders of the Future. Dutch Colonists in Soviet Siberia" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044280> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:russian-fairy-tales> ;
+    sdo:name "Frank Herfort's Russian Fairy Tales (Introduction)" .
+
+<https://orcid.org/0000-0002-8666-0047/work/136044281> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2022-05-18"^^xsd:date ;
+    sdo:name "Rusland - land dat anders wil zijn" .
+
+<https://orcid.org/0000-0002-8666-0047/work/142355718> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2023-06-26"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:het-financieele-dagblad> ;
+    sdo:name "Prigozjin sloeg eerste barst in Poetins maffiastaat" .
+
+<https://orcid.org/0000-0002-8666-0047/work/142355719> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2023-02-16"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:het-financieele-dagblad> ;
+    sdo:name "Rusland, steeds vaster ingeklemd tussen sancties en argwaan" .
+
+<https://orcid.org/0000-0002-8666-0047/work/145186559> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2023-08-19"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:raam-op-rusland> ;
+    sdo:name "Rusland – kan dit land anders zijn?" .
+
+<https://orcid.org/0000-0002-8666-0047/work/147799568> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:name "Film \"Строители будущего\"" .
+
+<https://orcid.org/0000-0002-8666-0047/work/147799569> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:name "Film \"De Getekende Hahn\"" .
+
+<https://orcid.org/0000-0002-8666-0047/work/148186160> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2017-10-24"^^xsd:date ;
+    sdo:name "Film \"Bouwen te midden van eenzaamheid\"" .
+
+<https://orcid.org/0000-0002-8666-0047/work/148186161> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2017-10-02"^^xsd:date ;
+    sdo:name "Film \"Russische revolutie bij het Internationaal Instituut voor Sociale Geschiedenis (IISG)\"" .
+
+<https://orcid.org/0000-0002-8666-0047/work/148186162> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2017-12-18"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:raam-op-rusland> ;
+    sdo:name "Zwijgen: ook een manier om het stalinisme te verwerken" .
+
+<https://orcid.org/0000-0002-8666-0047/work/158656341> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2024-03-20"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:raam-op-rusland> ;
+    sdo:name "Documentaires tonen de schokgolven van oorlogsdrama" .
+
+<https://orcid.org/0000-0002-8666-0047/work/167831811> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2014-10-01"^^xsd:date ;
+    sdo:name "Electronic Repository of Russian Historical Statistics: Website [Beta]" .
+
+<https://orcid.org/0000-0002-8666-0047/work/175174235> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2024-04-15"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:the-russia-program-george-washington-university> ;
+    sdo:name "Regional Perspectives on Russia: Data from the Electronic Repository of Russian Historical Statistics" .
+
+<https://orcid.org/0000-0002-8666-0047/work/175349163> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2024-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:een-band-van-vriendschap-en-hoop-35-jaar-stedenband-groningen-moermansk> ;
+    sdo:name "Hoe Rusland probeerde een 'normaal' land te worden" .
+
+<https://orcid.org/0000-0002-8666-0047/work/183679760> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-04-16"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:nrc> ;
+    sdo:name "Het Westen vergist zich in de Russische oorlogsdoelen" .
+
+<https://orcid.org/0000-0002-8666-0047/work/183679761> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-04-18"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:de-standaard> ;
+    sdo:name "Het Westen vergist zich in de Russische oorlogsdoelen" .
+
+<https://orcid.org/0000-0002-8666-0047/work/183679762> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-04-30"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:financieel-dagblad> ;
+    sdo:name "Waar Ruslands economie kraakt, profiteert Europa" .
+
+<https://orcid.org/0000-0002-8666-0047/work/183679763> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-05-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:raam-op-rusland> ;
+    sdo:name "Kan Rusland wel langdurig een grootschalige oorlog voeren?" .
+
+<https://orcid.org/0000-0002-8666-0047/work/183679764> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-05-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:leeuwarder-courant> ;
+    sdo:name "Het Westen vergist zich in de Russische oorlogsdoelen" .
+
+<https://orcid.org/0000-0002-8666-0047/work/186506570> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-04-30"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dagblad-van-het-noorden> ;
+    sdo:name "Het Westen vergist zich in de Russische oorlogsdoelen" .
+
+<https://orcid.org/0000-0002-8666-0047/work/194309074> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0002-8666-0047> ;
+    sdo:datePublished "2025-06-26"^^xsd:date ;
+    sdo:name "Россия: страна, которая хочет быть другой" .
+
+<https://orcid.org/0000-0003-0165-8341/work/106095951> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:haerlem-jaarboek-2020> ;
+    sdo:name "Vroege socialisten: de eerste Haarlemse leden van de Sociaal Democratische Bond 1880-1884" .
+
+<https://orcid.org/0000-0003-0165-8341/work/106095952> a sdo:Book ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:haerlem-reeks> ;
+    sdo:name "Dwarsliggers" .
+
+<https://orcid.org/0000-0003-0165-8341/work/107148472> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:research-and-education-in-urban-history-in-the-age-of-digital-libraries> ;
+    sdo:name "Semantic Deep Mapping in the Amsterdam Time Machine" .
+
+<https://orcid.org/0000-0003-0165-8341/work/120098940> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2022-07-31"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanties-2022-tokyo-japan-25-07-2022> ;
+    sdo:name "Digital Humanities and Replication. Ingredients for a Love Story. Experiences from the '(Re)counting the Uncounted' Project" .
+
+<https://orcid.org/0000-0003-0165-8341/work/126095256> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2022-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dh-benelux-journal> ;
+    sdo:name "Combining Tools with Linked Data" .
+
+<https://orcid.org/0000-0003-0165-8341/work/199153689> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-0165-8341> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dh-benelux-journal> ;
+    sdo:name "Persons in Context: Potential and pitfalls for the CLARIAH infrastructure" .
+
+<https://orcid.org/0000-0003-3902-3720/funding/1583371> a sdo:MonetaryGrant ;
+    sdo:fundedItem <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:funder <http://dx.doi.org/10.13039/501100003246> ;
+    sdo:identifier "203.001.129" ;
+    sdo:name "FAIR reuse of SPARQL queries through open Web sharing" .
+
+<https://orcid.org/0000-0003-3902-3720/funding/1583372> a sdo:MonetaryGrant ;
+    sdo:fundedItem <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:funder <http://dx.doi.org/10.13039/501100003246> ;
+    sdo:identifier "400-05-054" ;
+    sdo:name "Status Attainment During Industrialization, Life Courses in Local Context" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887079> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2008-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:honderdvijftig-jaar-levenslopen-de-historische-steekproef-nederlandse-bevolking> ;
+    sdo:name "De rol van het gymnasiaal en middelbaar onderwijs bij de intergenerationele overdracht van status, Nederland 1865-1940" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887080> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2009-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:istoricheskoe-professiovedenie-sozdanie-hisco-i-issledovaniia-professional-noi-i-sotsial-noi-mobil-nosti> ;
+    sdo:name "Rol' srednego obrazovaniia v mezhpokolennom perekhode professional' nogo statusa v Niderlandakh 1865-1940 gg." .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887082> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:how-was-life-global-well-being-since-1820> ;
+    sdo:name "\"Life Expectancy since 1820\"" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887084> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-12-01"^^xsd:date ;
+    sdo:name "NLGIS-2" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887085> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2015-01-20"^^xsd:date ;
+    sdo:name "Stakingen in kaart" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887086> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2014-03-10"^^xsd:date ;
+    sdo:name "Treemap" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887087> a sdo:Chapter ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:1st-workshop-on-humanities-in-the-semantic-web-whise> ;
+    sdo:name "An ecosystem for Linked Humanities Data" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887088> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2016-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanities-2016-conference-abstracts> ;
+    sdo:name "Work In A Globalised World. Allocation Algorithm To Add Labour Relations To Digitised Census Data" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887089> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2015-10-26"^^xsd:date ;
+    sdo:name "The Global Collaboratory on the History of Labour Relations, 1500-2000: Background, Set-Up, Taxonomy, and Applications" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887091> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2018-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dhbenelux-conference-2018-amsterdam-netherlands-06-06-2018> ;
+    sdo:name "Jamie LOD-iver" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887092> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2018-12-12"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:linked-pasts-iv-views-from-inside-the-lod-cloud-mainz-germany-11-12-2018> ;
+    sdo:name "Spatial Humanities Netherlands. Towards a national collaborative network" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887093> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-07-07"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanities-conference-2019-utrecht-netherlands-09-07-2019> ;
+    sdo:name "Spatial Humanities Netherlands. Towards a national collaborative network" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887095> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-10-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:proceedings-of-the-time-machine-conference> ;
+    sdo:name "Semantic Deep Mapping in the Amsterdam Time Machine" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887096> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-07-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanities-conference-2019-utrecht-netherlands-09-07-2019> ;
+    sdo:name "Semantic Deep Mapping in an Integrated Platform for Studying Historical Amsterdam" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887097> a sdo:Report ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-01-01"^^xsd:date ;
+    sdo:name "CLARIAH Research Pilot Final report: Amsterdam Time Machine" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887098> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-07-11"^^xsd:date ;
+    sdo:name "Towards a national collaborative network: Spatial Humanities Netherlands" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887099> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:name "Mining Wages in Nineteenth-Century Job Advertisements. The Application of Language Resources and Language Technology to study Economic and Social Inequality" .
+
+<https://orcid.org/0000-0003-3902-3720/work/130887106> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:research-and-education-in-urban-history-in-the-age-of-digital-libraries> ;
+    sdo:name "Semantic Deep Mapping in the Amsterdam Time Machine" .
+
+<https://orcid.org/0000-0003-3902-3720/work/135972579> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-07-07"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanities-conference-2019-utrecht-netherlands-09-07-2019> ;
+    sdo:name "Spatial Humanities Netherlands. Towards a national collaborative network" .
+
+<https://orcid.org/0000-0003-3902-3720/work/135972580> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-07-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:digital-humanities-conference-2019-utrecht-netherlands-09-07-2019> ;
+    sdo:name "Semantic Deep Mapping in an Integrated Platform for Studying Historical Amsterdam" .
+
+<https://orcid.org/0000-0003-3902-3720/work/135972581> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-10-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:proceedings-of-the-time-machine-conference> ;
+    sdo:name "Semantic Deep Mapping in the Amsterdam Time Machine" .
+
+<https://orcid.org/0000-0003-3902-3720/work/146605559> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:3rd-workshop-on-humanities-in-the-semantic-web-whise-2020-virtual-heraklion-greece-02-06-2020> ;
+    sdo:name "Linking Dutch civil certificates" .
+
+<https://orcid.org/0000-0003-3902-3720/work/147273710> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2021-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:historical-life-course-studies> ;
+    sdo:name "Retracing hotbeds of the 1918-9 influenza pandemic: Spatial differences in 1918-9 excess mortality in the Netherlands" .
+
+<https://orcid.org/0000-0003-3902-3720/work/148485354> a sdo:CreativeWork ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2020-01-01"^^xsd:date ;
+    sdo:name "Ontologies in clariah: Towards interoperability in history, language and media" .
+
+<https://orcid.org/0000-0003-3902-3720/work/195386806> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2019-10-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:conference-on-research-and-education-in-urban-history-in-the-age-of-digital-libraries-amp-digital-encounters-with-cultural-heritage-udhl-19> ;
+    sdo:name "Semantic Deep Mapping in an Integrated Platform for Studying Historical Amsterdam" .
+
+<https://orcid.org/0000-0003-3902-3720/work/199153524> a sdo:ScholarlyArticle ;
+    sdo:author <https://orcid.org/0000-0003-3902-3720> ;
+    sdo:datePublished "2025-01-01"^^xsd:date ;
+    sdo:isPartOf <urn:orcidgraph:periodical:dh-benelux-journal> ;
+    sdo:name "Persons in Context: Potential and pitfalls for the CLARIAH infrastructure" .
+
+<urn:orcidgraph:org:ivo-zandhuis-research-consultancy#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Haarlem" .
+
+<urn:orcidgraph:org:radboud-universiteit#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Nijmegen" .
+
+<urn:orcidgraph:org:royal-netherlands-academy-of-arts-sciences-knaw#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Amsterdam" .
+
+<urn:orcidgraph:org:universiteit-utrecht#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Utrecht" .
+
+<http://dx.doi.org/10.13039/100006007> a sdo:Organization ;
+    sdo:address <http://dx.doi.org/10.13039/100006007#address> ;
+    sdo:identifier <http://dx.doi.org/10.13039/100006007#identifier> ;
+    sdo:name "Weatherhead Initiative on Global History, Harvard University" .
+
+<http://dx.doi.org/10.13039/100006007#address> a sdo:PostalAddress ;
+    sdo:addressCountry "US" ;
+    sdo:addressLocality "Cambridge" .
+
+<http://dx.doi.org/10.13039/100006007#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "FUNDREF" ;
+    sdo:value "http://dx.doi.org/10.13039/100006007" .
+
+<http://dx.doi.org/10.13039/501100003246#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "The Hague" .
+
+<http://dx.doi.org/10.13039/501100003246#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "FUNDREF" ;
+    sdo:value "http://dx.doi.org/10.13039/501100003246" .
+
+<https://orcid.org/0000-0001-6394-260X/employment/16331109> a sdo:OrganizationRole ;
+    sdo:endDate "2021-10-31"^^xsd:date ;
+    sdo:roleName "Lecturer" ;
+    sdo:startDate "2021-08-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/008xxew50> .
+
+<https://orcid.org/0000-0001-6394-260X/employment/19456964> a sdo:OrganizationRole ;
+    sdo:roleName "Senior Researcher" ;
+    sdo:startDate "2023-01-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0001-6394-260X/employment/3620283> a sdo:OrganizationRole ;
+    sdo:endDate "2022-12-31"^^xsd:date ;
+    sdo:roleName "Postdoctoral researcher" ;
+    sdo:startDate "2015-09-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0001-6394-260X/employment/5196170> a sdo:OrganizationRole ;
+    sdo:endDate "2015-12-31"^^xsd:date ;
+    sdo:roleName "Global Fellow" ;
+    sdo:startDate "2015-08-01"^^xsd:date ;
+    sdo:worksFor <http://dx.doi.org/10.13039/100006007> .
+
+<https://orcid.org/0000-0001-7817-5298/employment/23114105> a sdo:OrganizationRole ;
+    sdo:roleName "Researcher" ;
+    sdo:startDate "2015-09-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0001-7817-5298/employment/6646125> a sdo:OrganizationRole ;
+    sdo:roleName "senior researcher" ;
+    sdo:startDate "2015-04-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0002-2267-1679/employment/14003783> a sdo:OrganizationRole ;
+    sdo:roleName "Employee" ;
+    sdo:startDate "2021-01-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0002-8666-0047/employment/17711922> a sdo:OrganizationRole ;
+    sdo:roleName "Senior Research Fellow" ;
+    sdo:startDate "2002-01-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0002-8666-0047/employment/23114064> a sdo:OrganizationRole ;
+    sdo:roleName "Researcher" ;
+    sdo:startDate "2002-01-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0003-3902-3720/employment/19967954> a sdo:OrganizationRole ;
+    sdo:roleName "Researcher, Head Data & Augmentation Department / Director HSNDB" ;
+    sdo:startDate "2013-01-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/05dq4pp56> .
+
+<https://orcid.org/0000-0003-3902-3720/employment/21748816> a sdo:OrganizationRole ;
+    sdo:roleName "Honourary Research Fellow" ;
+    sdo:startDate "2010-12-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/045wgfr59> .
+
+<https://orcid.org/0000-0003-3902-3720/employment/25933636> a sdo:OrganizationRole ;
+    sdo:roleName "Research Fellow" ;
+    sdo:startDate "2024-10-01"^^xsd:date ;
+    sdo:worksFor <https://ror.org/008xxew50> .
+
+<https://ror.org/008xxew50#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Amsterdam" .
+
+<https://ror.org/008xxew50#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "RINGGOLD",
+        "ROR" ;
+    sdo:value "https://ror.org/008xxew50" .
+
+<https://ror.org/043c0p156> a sdo:Organization ;
+    sdo:identifier <https://ror.org/043c0p156#identifier> ;
+    sdo:name "Royal Netherlands Academy of Arts and Sciences" .
+
+<https://ror.org/043c0p156#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "ROR" ;
+    sdo:value "https://ror.org/043c0p156" .
+
+<https://ror.org/045wgfr59> a sdo:Organization ;
+    sdo:address <https://ror.org/045wgfr59#address> ;
+    sdo:identifier <https://ror.org/045wgfr59#identifier> ;
+    sdo:name "University of Stirling" .
+
+<https://ror.org/045wgfr59#address> a sdo:PostalAddress ;
+    sdo:addressCountry "GB" ;
+    sdo:addressLocality "Stirling" .
+
+<https://ror.org/045wgfr59#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "ROR" ;
+    sdo:value "https://ror.org/045wgfr59" .
+
+<https://ror.org/05dq4pp56#address> a sdo:PostalAddress ;
+    sdo:addressCountry "NL" ;
+    sdo:addressLocality "Amsterdam" .
+
+<https://ror.org/05dq4pp56#identifier> a sdo:PropertyValue ;
+    sdo:propertyID "FUNDREF",
+        "ROR",
+        "manual-alias" ;
+    sdo:value "https://ror.org/05dq4pp56" .
+
+<urn:orcidgraph:periodical:1st-workshop-on-humanities-in-the-semantic-web-whise> a sdo:Periodical ;
+    sdo:name "1st Workshop on Humanities in the Semantic Web (WHiSe)" .
+
+<urn:orcidgraph:periodical:3rd-workshop-on-humanities-in-the-semantic-web-whise-2020-virtual-heraklion-greece-02-06-2020> a sdo:Periodical ;
+    sdo:name "3rd Workshop on Humanities in the Semantic Web, WHiSe 2020, Virtual, Heraklion, Greece, 02/06/2020" .
+
+<urn:orcidgraph:periodical:a-dream-deferred-new-studies-in-russian-and-soviet-labour-history> a sdo:Periodical ;
+    sdo:name "A Dream Deferred: New Studies in Russian and Soviet Labour History" .
+
+<urn:orcidgraph:periodical:a-usable-collection> a sdo:Periodical ;
+    sdo:name "A Usable Collection. " .
+
+<urn:orcidgraph:periodical:accountability-in-research> a sdo:Periodical ;
+    sdo:name "Accountability in Research" .
+
+<urn:orcidgraph:periodical:agrarnaia-sfera-v-kontekste-rossiiskikh-modernizatsii-xviii-xx-vekov-makro-i-mikroprotsessy-sbornik-statei> a sdo:Periodical ;
+    sdo:name "Agrarnaia sfera v kontekste rossiiskikh modernizatsii XVIII - XX vekov: makro- i mikroprotsessy. Sbornik statei" .
+
+<urn:orcidgraph:periodical:aisola-knossos-greece-23-10-2023> a sdo:Periodical ;
+    sdo:name "AISoLA, Knossos, Greece, 23/10/2023" .
+
+<urn:orcidgraph:periodical:applied-economics-letters> a sdo:Periodical ;
+    sdo:name "Applied Economics Letters" .
+
+<urn:orcidgraph:periodical:archaeological-and-anthropological-sciences> a sdo:Periodical ;
+    sdo:name "Archaeological and Anthropological Sciences" .
+
+<urn:orcidgraph:periodical:arxiv> a sdo:Periodical ;
+    sdo:name "arXiv" .
+
+<urn:orcidgraph:periodical:arxiv-preprint> a sdo:Periodical ;
+    sdo:name "arXiv preprint" .
+
+<urn:orcidgraph:periodical:asia-and-the-global-economy> a sdo:Periodical ;
+    sdo:name "Asia and the Global Economy" .
+
+<urn:orcidgraph:periodical:asian-economic-journal> a sdo:Periodical ;
+    sdo:name "Asian Economic Journal" .
+
+<urn:orcidgraph:periodical:biorxiv> a sdo:Periodical ;
+    sdo:name "bioRxiv" .
+
+<urn:orcidgraph:periodical:bulletin-of-indonesian-economic-studies> a sdo:Periodical ;
+    sdo:name "Bulletin of Indonesian Economic Studies" .
+
+<urn:orcidgraph:periodical:cage-online-working-paper-series> a sdo:Periodical ;
+    sdo:name "CAGE Online Working Paper Series " .
+
+<urn:orcidgraph:periodical:cai-jing-guo-jia-zhou-kan-china-financial-weekly> a sdo:Periodical ;
+    sdo:name "财经国家周刊/Cai Jing Guo Jia Zhou Kan/China Financial Weekly" .
+
+<urn:orcidgraph:periodical:cepr-discussion-papers> a sdo:Periodical ;
+    sdo:name "CEPR Discussion Papers" .
+
+<urn:orcidgraph:periodical:china-economist> a sdo:Periodical ;
+    sdo:name "China Economist" .
+
+<urn:orcidgraph:periodical:china-in-the-local-and-global-economy> a sdo:Periodical ;
+    sdo:name "China in the Local and Global Economy " .
+
+<urn:orcidgraph:periodical:conference-on-research-and-education-in-urban-history-in-the-age-of-digital-libraries-amp-digital-encounters-with-cultural-heritage-udhl-19> a sdo:Periodical ;
+    sdo:name "Conference on Research and Education in Urban History in the Age of Digital Libraries &amp; Digital Encounters with Cultural Heritage (UDHL’19)" .
+
+<urn:orcidgraph:periodical:constructing-and-representing-territory-in-late-medieval-and-early-modern-europe> a sdo:Periodical ;
+    sdo:name "Constructing and Representing Territory in Late Medieval and Early Modern Europe" .
+
+<urn:orcidgraph:periodical:cont-change> a sdo:Periodical ;
+    sdo:name "Cont. Change" .
+
+<urn:orcidgraph:periodical:coordinating-the-european-research-area-the-role-of-erics-and-national-stakeholders-strengthening-the-social-sciences-and-humanities-the-hague-netherlands-27-11-2024> a sdo:Periodical ;
+    sdo:name "Coordinating the European Research Area: the role of ERICs and national stakeholders – strengthening the Social Sciences and Humanities, The Hague, Netherlands, 27/11/2024" .
+
+<urn:orcidgraph:periodical:dagblad-van-het-noorden> a sdo:Periodical ;
+    sdo:name "Dagblad van het Noorden" .
+
+<urn:orcidgraph:periodical:de-economist> a sdo:Periodical ;
+    sdo:name "De Economist" .
+
+<urn:orcidgraph:periodical:de-standaard> a sdo:Periodical ;
+    sdo:name "De Standaard" .
+
+<urn:orcidgraph:periodical:demres> a sdo:Periodical ;
+    sdo:name "DemRes" .
+
+<urn:orcidgraph:periodical:dendrochronologia> a sdo:Periodical ;
+    sdo:name "Dendrochronologia" .
+
+<urn:orcidgraph:periodical:dhbenelux-conference-2018-amsterdam-netherlands-06-06-2018> a sdo:Periodical ;
+    sdo:name "DHBenelux Conference 2018, Amsterdam, Netherlands, 06/06/2018" .
+
+<urn:orcidgraph:periodical:digital-humanities-2016-conference-abstracts> a sdo:Periodical ;
+    sdo:name "Digital Humanities 2016: Conference Abstracts" .
+
+<urn:orcidgraph:periodical:digital-humanties-2022-tokyo-japan-25-07-2022> a sdo:Periodical ;
+    sdo:name "Digital Humanties 2022, Tokyo, Japan, 25/07/2022" .
+
+<urn:orcidgraph:periodical:digital-scholarship-in-the-humanities> a sdo:Periodical ;
+    sdo:name "Digital Scholarship in the Humanities" .
+
+<urn:orcidgraph:periodical:economic-and-social-history-review> a sdo:Periodical ;
+    sdo:name "经济社会史评论 (Economic and Social History Review)" .
+
+<urn:orcidgraph:periodical:economic-history-of-developing-regions> a sdo:Periodical ;
+    sdo:name "Economic History of Developing Regions" .
+
+<urn:orcidgraph:periodical:economic-history-review> a sdo:Periodical ;
+    sdo:name "Economic History Review" .
+
+<urn:orcidgraph:periodical:economics-and-human-biology> a sdo:Periodical ;
+    sdo:name "Economics and Human Biology" .
+
+<urn:orcidgraph:periodical:economics-of-transition> a sdo:Periodical ;
+    sdo:name "Economics of Transition" .
+
+<urn:orcidgraph:periodical:education-economics> a sdo:Periodical ;
+    sdo:name "Education Economics" .
+
+<urn:orcidgraph:periodical:een-band-van-vriendschap-en-hoop-35-jaar-stedenband-groningen-moermansk> a sdo:Periodical ;
+    sdo:name "Een band van vriendschap en hoop. 35 jaar Stedenband Groningen-Moermansk" .
+
+<urn:orcidgraph:periodical:ekonomicheskaia-istoriia-obozrenie> a sdo:Periodical ;
+    sdo:name "Ekonomicheskaia istoriia. Obozrenie" .
+
+<urn:orcidgraph:periodical:enzyklop-die-migration-in-europa-vom-17-jahrhundert-bis-zur-gegenwart> a sdo:Periodical ;
+    sdo:name "Enzyklopädie Migration in Europa: Vom 17. Jahrhundert bis zur Gegenwart" .
+
+<urn:orcidgraph:periodical:european-journal-of-development-research> a sdo:Periodical ;
+    sdo:name "European Journal of Development Research" .
+
+<urn:orcidgraph:periodical:european-journal-of-science-and-theology> a sdo:Periodical ;
+    sdo:name "European Journal of Science and Theology" .
+
+<urn:orcidgraph:periodical:financieel-dagblad> a sdo:Periodical ;
+    sdo:name "Financieel Dagblad" .
+
+<urn:orcidgraph:periodical:frontiers-of-economics-in-china> a sdo:Periodical ;
+    sdo:name "Frontiers of Economics in China" .
+
+<urn:orcidgraph:periodical:geohumanities-2023-proceedings-of-the-7th-acm-sigspatial-international-workshop-on-geospatial-humanities> a sdo:Periodical ;
+    sdo:name "GeoHumanities 2023 - Proceedings of the 7th ACM SIGSPATIAL International Workshop on Geospatial Humanities" .
+
+<urn:orcidgraph:periodical:global-coe-hi-stat-discussion-paper-series> a sdo:Periodical ;
+    sdo:name "Global COE Hi-Stat Discussion Paper Series" .
+
+<urn:orcidgraph:periodical:global-economic-history-series-the-quantitative-economic-history-of-china> a sdo:Periodical ;
+    sdo:name "Global Economic History Series/The Quantitative Economic History of China " .
+
+<urn:orcidgraph:periodical:globalising-migration-history-the-eurasian-experience-16th-21st-centuries> a sdo:Periodical ;
+    sdo:name "Globalising Migration History : the Eurasian Experience (16th-21st centuries)" .
+
+<urn:orcidgraph:periodical:gouda-jso> a sdo:Periodical ;
+    sdo:name "Gouda: JSO" .
+
+<urn:orcidgraph:periodical:groniek-historisch-tijdschrift> a sdo:Periodical ;
+    sdo:name "Groniek: historisch tijdschrift" .
+
+<urn:orcidgraph:periodical:haerlem-jaarboek-2020> a sdo:Periodical ;
+    sdo:name "Haerlem Jaarboek 2020" .
+
+<urn:orcidgraph:periodical:haerlem-reeks> a sdo:Periodical ;
+    sdo:name "Haerlem Reeks" .
+
+<urn:orcidgraph:periodical:handbook-of-industrial-development> a sdo:Periodical ;
+    sdo:name "Handbook of Industrial Development" .
+
+<urn:orcidgraph:periodical:hermitage-magazine> a sdo:Periodical ;
+    sdo:name "Hermitage Magazine" .
+
+<urn:orcidgraph:periodical:history-of-the-family> a sdo:Periodical ;
+    sdo:name "History of the Family" .
+
+<urn:orcidgraph:periodical:honderdvijftig-jaar-levenslopen-de-historische-steekproef-nederlandse-bevolking> a sdo:Periodical ;
+    sdo:name "Honderdvijftig jaar levenslopen: De Historische Steekproef Nederlandse bevolking." .
+
+<urn:orcidgraph:periodical:how-was-life-volume-ii-new-perspectives-on-well-being-and-global-inequality-since-1820> a sdo:Periodical ;
+    sdo:name "How was life? Volume II: New perspectives on well-being and global inequality since 1820" .
+
+<urn:orcidgraph:periodical:https-doi-org-10-17026-dans-27b-t9u2> a sdo:Periodical ;
+    sdo:name "https://doi.org/10.17026/dans-27b-t9u2" .
+
+<urn:orcidgraph:periodical:https-doi-org-10-17026-dans-zap-qxmc> a sdo:Periodical ;
+    sdo:name "https://doi.org/10.17026/dans-zap-qxmc" .
+
+<urn:orcidgraph:periodical:hunger-by-design-the-great-ukrainian-famine-and-its-soviet-context> a sdo:Periodical ;
+    sdo:name "Hunger by design : the great Ukrainian famine and its Soviet context" .
+
+<urn:orcidgraph:periodical:information-technology-and-libraries> a sdo:Periodical ;
+    sdo:name "Information Technology and Libraries" .
+
+<urn:orcidgraph:periodical:int-j-of-soc-social-policy> a sdo:Periodical ;
+    sdo:name "Int J of Soc & Social Policy" .
+
+<urn:orcidgraph:periodical:international-and-comparative-social-history> a sdo:Periodical ;
+    sdo:name "International and Comparative Social History" .
+
+<urn:orcidgraph:periodical:international-review-of-social-history> a sdo:Periodical ;
+    sdo:name "International Review of Social History" .
+
+<urn:orcidgraph:periodical:istoricheskoe-professiovedenie-sozdanie-hisco-i-issledovaniia-professional-noi-i-sotsial-noi-mobil-nosti> a sdo:Periodical ;
+    sdo:name "Istoricheskoe professiovedenie: sozdanie HISCO i issledovaniia professional'noi i sotsial'noi mobil'nosti" .
+
+<urn:orcidgraph:periodical:italian-economic-journal> a sdo:Periodical ;
+    sdo:name "Italian Economic Journal" .
+
+<urn:orcidgraph:periodical:iza-discussion-papers> a sdo:Periodical ;
+    sdo:name "IZA Discussion Papers" .
+
+<urn:orcidgraph:periodical:journal-for-the-history-of-knowledge> a sdo:Periodical ;
+    sdo:name "Journal for the History of Knowledge" .
+
+<urn:orcidgraph:periodical:journal-of-asian-history> a sdo:Periodical ;
+    sdo:name "Journal of Asian History" .
+
+<urn:orcidgraph:periodical:journal-of-eurasian-studies> a sdo:Periodical ;
+    sdo:name "Journal of Eurasian Studies" .
+
+<urn:orcidgraph:periodical:journal-of-global-history> a sdo:Periodical ;
+    sdo:name "Journal of Global History" .
+
+<urn:orcidgraph:periodical:journal-of-interdisciplinary-history> a sdo:Periodical ;
+    sdo:name "Journal of Interdisciplinary History" .
+
+<urn:orcidgraph:periodical:journal-of-the-asia-pacific-economy> a sdo:Periodical ;
+    sdo:name "Journal of the Asia Pacific Economy" .
+
+<urn:orcidgraph:periodical:journal-of-the-royal-society-interface> a sdo:Periodical ;
+    sdo:name "Journal of the Royal Society Interface" .
+
+<urn:orcidgraph:periodical:kodikologie-und-pal-ographie-im-digitalen-zeitalter-codicology-and-palaeography-in-the-digital-age> a sdo:Periodical ;
+    sdo:name "Kodikologie und Paläographie im Digitalen Zeitalter / Codicology and Palaeography in the Digital Age" .
+
+<urn:orcidgraph:periodical:labour-matters-towards-global-histories-studies-in-honour-of-sabyasachi-bhattacharya> a sdo:Periodical ;
+    sdo:name "Labour matters: towards global histories. Studies in honour of Sabyasachi Bhattacharya" .
+
+<urn:orcidgraph:periodical:leeuwarder-courant> a sdo:Periodical ;
+    sdo:name "Leeuwarder Courant" .
+
+<urn:orcidgraph:periodical:linked-pasts-iv-views-from-inside-the-lod-cloud-mainz-germany-11-12-2018> a sdo:Periodical ;
+    sdo:name "Linked Pasts IV: Views from inside the LOD-cloud, Mainz, Germany, 11/12/2018" .
+
+<urn:orcidgraph:periodical:literary-and-linguistic-computing> a sdo:Periodical ;
+    sdo:name "Literary and Linguistic Computing" .
+
+<urn:orcidgraph:periodical:literary-and-linguistics-computing> a sdo:Periodical ;
+    sdo:name "Literary and Linguistics Computing" .
+
+<urn:orcidgraph:periodical:llc-the-journal-of-digital-scholarship-in-the-humanities> a sdo:Periodical ;
+    sdo:name "LLC: the journal of digital scholarship in the humanities" .
+
+<urn:orcidgraph:periodical:long-term-quantification-in-ancient-history> a sdo:Periodical ;
+    sdo:name "Long-term Quantification in Ancient History" .
+
+<urn:orcidgraph:periodical:lordship-and-the-decentralized-state-in-late-medieval-europe> a sdo:Periodical ;
+    sdo:name "Lordship and the Decentralized State in Late Medieval Europe" .
+
+<urn:orcidgraph:periodical:macht-bezit-en-ruimte-opstellen-over-de-noordelijke-nederlanden-in-de-middeleeuwen> a sdo:Periodical ;
+    sdo:name "Macht, bezit en ruimte. Opstellen over de noordelijke Nederlanden in de middeleeuwen" .
+
+<urn:orcidgraph:periodical:markets-and-exchanges-oin-pre-modern-and-traditional-societies> a sdo:Periodical ;
+    sdo:name "Markets and Exchanges oin Pre-modern and Traditional Societies" .
+
+<urn:orcidgraph:periodical:migration-and-membership-regimes-in-global-and-historical-perspective> a sdo:Periodical ;
+    sdo:name "Migration and Membership Regimes in Global and Historical Perspective" .
+
+<urn:orcidgraph:periodical:military-orders-5-politics-and-power> a sdo:Periodical ;
+    sdo:name "Military Orders 5: Politics and Power" .
+
+<urn:orcidgraph:periodical:military-orders-vol-5-politics-and-power> a sdo:Periodical ;
+    sdo:name "MILITARY ORDERS, VOL 5: POLITICS AND POWER" .
+
+<urn:orcidgraph:periodical:mpra-working-paper> a sdo:Periodical ;
+    sdo:name "MPRA Working Paper" .
+
+<urn:orcidgraph:periodical:nature-communications> a sdo:Periodical ;
+    sdo:name "Nature Communications" .
+
+<urn:orcidgraph:periodical:nog-meer-wereldgeschiedenis-van-nederland> a sdo:Periodical ;
+    sdo:name "Nog meer Wereldgeschiedenis van Nederland" .
+
+<urn:orcidgraph:periodical:northeast-asia-in-focus-life-work-and-industry-between-the-steppe-and-the-metropoles-1900-2020> a sdo:Periodical ;
+    sdo:name "Northeast Asia in Focus: Life, work and industry between the steppe and the metropoles, 1900-2020" .
+
+<urn:orcidgraph:periodical:nrc> a sdo:Periodical ;
+    sdo:name "NRC" .
+
+<urn:orcidgraph:periodical:population-reconstruction> a sdo:Periodical ;
+    sdo:name "Population Reconstruction" .
+
+<urn:orcidgraph:periodical:population-studies> a sdo:Periodical ;
+    sdo:name "Population Studies" .
+
+<urn:orcidgraph:periodical:post-communist-economies> a sdo:Periodical ;
+    sdo:name "Post-Communist Economies" .
+
+<urn:orcidgraph:periodical:proletarian-and-gendered-mass-migrations-a-global-perspective-on-continuities-and-discontinuities-from-the-19th-to-the-21st-centuries> a sdo:Periodical ;
+    sdo:name "Proletarian and Gendered Mass Migrations. A Global Perspective on Continuities and Discontinuities from the 19th to the 21st Centuries" .
+
+<urn:orcidgraph:periodical:qingshi-luncong> a sdo:Periodical ;
+    sdo:name "Qingshi Luncong" .
+
+<urn:orcidgraph:periodical:regional-economic-development-and-history> a sdo:Periodical ;
+    sdo:name "Regional Economic Development and History" .
+
+<urn:orcidgraph:periodical:research-in-social-stratification-and-mobility> a sdo:Periodical ;
+    sdo:name "Research in Social Stratification and Mobility" .
+
+<urn:orcidgraph:periodical:russia-in-motion-politics-society-and-the-culture-of-human-mobility-1850-present> a sdo:Periodical ;
+    sdo:name "Russia in Motion: Politics, Society and the Culture of Human Mobility, 1850-Present" .
+
+<urn:orcidgraph:periodical:russian-fairy-tales> a sdo:Periodical ;
+    sdo:name "Russian Fairy Tales" .
+
+<urn:orcidgraph:periodical:silver-money-and-credit> a sdo:Periodical ;
+    sdo:name "Silver, Money and Credit. " .
+
+<urn:orcidgraph:periodical:social-sciences-in-china> a sdo:Periodical ;
+    sdo:name "Social Sciences in China" .
+
+<urn:orcidgraph:periodical:sotsial-naia-istorii-rossii-xx-veka> a sdo:Periodical ;
+    sdo:name "Sotsial'naia istorii Rossii XX veka" .
+
+<urn:orcidgraph:periodical:ssm-population-health> a sdo:Periodical ;
+    sdo:name "SSM - Population Health" .
+
+<urn:orcidgraph:periodical:statisztikai-szemle-hungarian-statistical-review> a sdo:Periodical ;
+    sdo:name "Statisztikai Szemle (Hungarian Statistical Review)" .
+
+<urn:orcidgraph:periodical:technol-giai-fejlod-s-s-int-zm-nyek-competitio-k-nyvek> a sdo:Periodical ;
+    sdo:name "Technológiai fejlodés és intézmények. Competitio könyvek" .
+
+<urn:orcidgraph:periodical:technology-skills-and-the-pre-modern-economy-in-the-east-and-west-essays-dedicated-to-the-memory-of-s-r-epstein> a sdo:Periodical ;
+    sdo:name "Technology, Skills and the Pre-Modern Economy in the East and West. Essays dedicated to the memory of S.R. Epstein" .
+
+<urn:orcidgraph:periodical:the-cambridge-economic-history-of-china-vol-2-1800-to-the-present> a sdo:Periodical ;
+    sdo:name "The Cambridge Economic History of China, vol. 2: 1800 to the Present" .
+
+<urn:orcidgraph:periodical:the-cambridge-economic-history-of-the-modern-world-volume-1-1700-1870> a sdo:Periodical ;
+    sdo:name "The Cambridge Economic History of the Modern World, Volume 1 (1700-1870)" .
+
+<urn:orcidgraph:periodical:the-encyclopedia-of-migration-and-minorities-in-europe-from-the-seventeenth-century-to-the-present> a sdo:Periodical ;
+    sdo:name "The encyclopedia of migration and minorities in Europe : from the seventeenth century to the present" .
+
+<urn:orcidgraph:periodical:the-european-journal-of-development-research> a sdo:Periodical ;
+    sdo:name "The European Journal of Development Research" .
+
+<urn:orcidgraph:periodical:the-journal-of-european-economic-history> a sdo:Periodical ;
+    sdo:name "The Journal of European Economic History" .
+
+<urn:orcidgraph:periodical:the-journal-of-interdisciplinary-history> a sdo:Periodical ;
+    sdo:name "The Journal of Interdisciplinary History" .
+
+<urn:orcidgraph:periodical:the-medieval-low-countries-an-annual-review> a sdo:Periodical ;
+    sdo:name "The Medieval Low Countries. An Annual Review" .
+
+<urn:orcidgraph:periodical:the-military-orders-5-politics-and-power> a sdo:Periodical ;
+    sdo:name "The Military Orders 5: Politics and Power" .
+
+<urn:orcidgraph:periodical:the-military-religious-orders-history-sources-and-memory> a sdo:Periodical ;
+    sdo:name "The Military Religious Orders: History, Sources, and Memory" .
+
+<urn:orcidgraph:periodical:the-russia-program-george-washington-university> a sdo:Periodical ;
+    sdo:name "The Russia Program. George Washington University" .
+
+<urn:orcidgraph:periodical:the-semantic-web> a sdo:Periodical ;
+    sdo:name "The Semantic Web" .
+
+<urn:orcidgraph:periodical:the-utrecht-chronicle-of-the-teutonic-order-a-history-of-the-crusades-in-the-holy-land-prussia-and-livonia-edition-and-translation> a sdo:Periodical ;
+    sdo:name "The Utrecht Chronicle of the Teutonic Order: A History of the Crusades in the Holy Land, Prussia and Livonia (Edition and Translation)" .
+
+<urn:orcidgraph:periodical:university-of-kent-school-of-economics-discussion-papers> a sdo:Periodical ;
+    sdo:name "University of Kent School of Economics Discussion Papers " .
+
+<urn:orcidgraph:periodical:working-on-labor-essays-in-honor-of-jan-lucassen> a sdo:Periodical ;
+    sdo:name "Working on Labor. Essays in Honor of Jan Lucassen" .
+
+<urn:orcidgraph:periodical:zhongguo-shehui-kexue-social-science-in-china> a sdo:Periodical ;
+    sdo:name "Zhongguo Shehui Kexue (Social Science in China)" .
+
+<https://ror.org/008xxew50> a sdo:Organization ;
+    sdo:address <https://ror.org/008xxew50#address> ;
+    sdo:identifier <https://ror.org/008xxew50#identifier> ;
+    sdo:name "Vrije Universiteit Amsterdam" .
+
+<urn:orcidgraph:periodical:an-economic-history-of-famine-resilience> a sdo:Periodical ;
+    sdo:name "An Economic History of Famine Resilience" .
+
+<urn:orcidgraph:periodical:analecta-theutonica-studies-for-the-history-of-the-teutonic-order> a sdo:Periodical ;
+    sdo:name "Analecta Theutonica. Studies for the History of the Teutonic Order" .
+
+<urn:orcidgraph:periodical:applications-and-practices-in-ontology-design-extraction-and-reasoning> a sdo:Periodical ;
+    sdo:name "Applications and Practices in Ontology Design, Extraction, and Reasoning",
+        "Applications and Practices in Ontology Design, Extraction, and Reasoning  " .
+
+<urn:orcidgraph:periodical:ceur-workshop-proceedings> a sdo:Periodical ;
+    sdo:name "CEUR Workshop Proceedings" .
+
+<urn:orcidgraph:periodical:continuity-and-change> a sdo:Periodical ;
+    sdo:name "Continuity and Change" .
+
+<urn:orcidgraph:periodical:economics-human-biology> a sdo:Periodical ;
+    sdo:name "Economics & Human Biology" .
+
+<urn:orcidgraph:periodical:explorations-in-economic-history> a sdo:Periodical ;
+    sdo:name "Explorations in Economic History" .
+
+<urn:orcidgraph:periodical:heerlijkheden-in-holland> a sdo:Periodical ;
+    sdo:name "Heerlijkheden in Holland" .
+
+<urn:orcidgraph:periodical:het-financieele-dagblad> a sdo:Periodical ;
+    sdo:name "Het Financieele Dagblad" .
+
+<urn:orcidgraph:periodical:holland-historisch-tijdschrift> a sdo:Periodical ;
+    sdo:name "Holland: historisch tijdschrift" .
+
+<urn:orcidgraph:periodical:how-was-life-global-well-being-since-1820> a sdo:Periodical ;
+    sdo:name "How Was Life? Global Well-Being Since 1820",
+        "How Was Life?: Global Well-being since 1820",
+        "How was life? Global Well-Being since 1820" .
+
+<urn:orcidgraph:periodical:jaarboek-voor-middeleeuwse-geschiedenis> a sdo:Periodical ;
+    sdo:name "Jaarboek voor Middeleeuwse Geschiedenis" .
+
+<urn:orcidgraph:periodical:mpra-paper> a sdo:Periodical ;
+    sdo:name "MPRA Paper",
+        "MPRA Paper " .
+
+<urn:orcidgraph:periodical:munich-personal-repec-archive> a sdo:Periodical ;
+    sdo:name "Munich Personal RePEc Archive" .
+
+<urn:orcidgraph:periodical:priester-im-deutschen-orden> a sdo:Periodical ;
+    sdo:name "Priester im Deutschen Orden" .
+
+<urn:orcidgraph:periodical:priester-im-deutschen-orden-herausgegeben-von-udo-arnold> a sdo:Periodical ;
+    sdo:name "Priester im Deutschen Orden / herausgegeben von Udo Arnold" .
+
+<urn:orcidgraph:periodical:proceedings-of-the-time-machine-conference> a sdo:Periodical ;
+    sdo:name "Proceedings of the Time Machine Conference " .
+
+<urn:orcidgraph:periodical:research-and-education-in-urban-history-in-the-age-of-digital-libraries> a sdo:Periodical ;
+    sdo:name "Research and Education in Urban History in the Age of Digital Libraries" .
+
+<urn:orcidgraph:periodical:research-data-journal-for-the-humanities-and-social-sciences> a sdo:Periodical ;
+    sdo:name "Research Data Journal for the Humanities and Social Sciences" .
+
+<urn:orcidgraph:periodical:researches-in-chinese-economic-history> a sdo:Periodical ;
+    sdo:name "Researches in Chinese economic history" .
+
+<urn:orcidgraph:periodical:review-of-income-and-wealth> a sdo:Periodical ;
+    sdo:name "Review of Income and Wealth" .
+
+<urn:orcidgraph:periodical:schriftlichkeit-im-preu-enland> a sdo:Periodical ;
+    sdo:name "Schriftlichkeit im Preußenland" .
+
+<urn:orcidgraph:periodical:the-economic-history-of-central-east-and-south-east-europe-1800-to-the-present> a sdo:Periodical ;
+    sdo:name "The Economic History of Central, East and South-East Europe: 1800 to the Present" .
+
+<urn:orcidgraph:periodical:the-economic-history-review> a sdo:Periodical ;
+    sdo:name "The Economic history review" .
+
+<urn:orcidgraph:periodical:the-military-orders-volume-5-politics-and-power> a sdo:Periodical ;
+    sdo:name "The Military Orders, Volume 5: Politics and Power" .
+
+<urn:orcidgraph:periodical:tijdschrift-voor-sociale-en-economische-geschiedenis> a sdo:Periodical ;
+    sdo:name "Tijdschrift voor Sociale en Economische Geschiedenis" .
+
+<urn:orcidgraph:periodical:acta-oeconomica> a sdo:Periodical ;
+    sdo:name "Acta Oeconomica" .
+
+<urn:orcidgraph:periodical:dh-benelux-journal> a sdo:Periodical ;
+    sdo:name "DH Benelux Journal" .
+
+<urn:orcidgraph:periodical:eastern-european-economics> a sdo:Periodical ;
+    sdo:name "Eastern European Economics" .
+
+<urn:orcidgraph:periodical:historical-methods-a-journal-of-quantitative-and-interdisciplinary-history> a sdo:Periodical ;
+    sdo:name "Historical Methods: A Journal of Quantitative and Interdisciplinary History" .
+
+<urn:orcidgraph:periodical:schriftlichkeit-im-preussenland> a sdo:Periodical ;
+    sdo:name "Schriftlichkeit im Preussenland" .
+
+<http://dx.doi.org/10.13039/501100003246> a sdo:Organization ;
+    sdo:address <http://dx.doi.org/10.13039/501100003246#address> ;
+    sdo:identifier <http://dx.doi.org/10.13039/501100003246#identifier> ;
+    sdo:name "Dutch Research Council" .
+
+<urn:orcidgraph:periodical:an-economic-history-of-regional-industrialization> a sdo:Periodical ;
+    sdo:name "An Economic History of Regional Industrialization",
+        "An Economic History of Regional Industrialization " .
+
+<urn:orcidgraph:periodical:australian-economic-history-review> a sdo:Periodical ;
+    sdo:name "Australian Economic History Review" .
+
+<urn:orcidgraph:periodical:cliometrica> a sdo:Periodical ;
+    sdo:name "Cliometrica" .
+
+<urn:orcidgraph:periodical:digital-humanities-conference-2019-utrecht-netherlands-09-07-2019> a sdo:Periodical ;
+    sdo:name "Digital Humanities Conference 2019, Utrecht, Netherlands, 09/07/2019" .
+
+<urn:orcidgraph:periodical:raam-op-rusland> a sdo:Periodical ;
+    sdo:name "Raam op Rusland" .
+
+<urn:orcidgraph:periodical:routledge-explorations-in-economic-history> a sdo:Periodical ;
+    sdo:name "Routledge Explorations in Economic History" .
+
+<urn:orcidgraph:periodical:the-quantitative-economic-history-of-china> a sdo:Periodical ;
+    sdo:name "The Quantitative Economic History of China" .
+
+<urn:orcidgraph:periodical:money-currency-and-crisis-in-search-of-trust-2000-bc-to-ad-2000> a sdo:Periodical ;
+    sdo:name "Money, Currency and Crisis: In Search of Trust, 2000 BC to AD 2000" .
+
+<urn:orcidgraph:periodical:a-history-of-market-performance> a sdo:Periodical ;
+    sdo:name "A History of Market Performance" .
+
+<urn:orcidgraph:periodical:historical-life-course-studies> a sdo:Periodical ;
+    sdo:name "Historical Life Course Studies" .
+
+<urn:orcidgraph:periodical:the-history-of-the-family> a sdo:Periodical ;
+    sdo:name "The History of the Family" .
+
+<https://ror.org/05dq4pp56> a sdo:Organization ;
+    sdo:address <https://ror.org/05dq4pp56#address> ;
+    sdo:identifier <https://ror.org/05dq4pp56#identifier> ;
+    sdo:name "Internationaal Instituut voor Sociale Geschiedenis",
+        "International Institute of Social History" ;
+    sdo:parentOrganization <https://ror.org/043c0p156> .
+
+<urn:orcidgraph:periodical:cgeh-working-paper-series> a sdo:Periodical ;
+    sdo:name "CGEH Working Paper Series",
+        "CGEH working paper series" .
+
+<https://orcid.org/0000-0003-0165-8341> a sdo:Person ;
+    sdo:familyName "Zandhuis" ;
+    sdo:givenName "Ivo" ;
+    sdo:name "Ivo Zandhuis" .
+
+<https://orcid.org/0000-0002-2267-1679> a sdo:Person ;
+    sdo:familyName "Mourits" ;
+    sdo:givenName "Rick" ;
+    sdo:name "Rick Mourits" ;
+    sdo:worksFor <https://orcid.org/0000-0002-2267-1679/employment/14003783> .
+
+<https://orcid.org/0000-0002-8666-0047> a sdo:Person ;
+    sdo:familyName "Kessler" ;
+    sdo:givenName "Gijs" ;
+    sdo:name "Gijs Kessler" ;
+    sdo:worksFor <https://orcid.org/0000-0002-8666-0047/employment/17711922>,
+        <https://orcid.org/0000-0002-8666-0047/employment/23114064> .
+
+<https://orcid.org/0000-0001-6394-260X> a sdo:Person ;
+    sdo:familyName "Stapel" ;
+    sdo:givenName "Rombert" ;
+    sdo:name "Rombert Stapel" ;
+    sdo:worksFor <https://orcid.org/0000-0001-6394-260X/employment/16331109>,
+        <https://orcid.org/0000-0001-6394-260X/employment/19456964>,
+        <https://orcid.org/0000-0001-6394-260X/employment/3620283>,
+        <https://orcid.org/0000-0001-6394-260X/employment/5196170> .
+
+<https://orcid.org/0000-0003-3902-3720> a sdo:Person ;
+    sdo:familyName "Zijdeman" ;
+    sdo:givenName "Richard" ;
+    sdo:name "Richard Zijdeman" ;
+    sdo:worksFor <https://orcid.org/0000-0003-3902-3720/employment/19967954>,
+        <https://orcid.org/0000-0003-3902-3720/employment/21748816>,
+        <https://orcid.org/0000-0003-3902-3720/employment/25933636> .
+
+<https://orcid.org/0000-0001-7817-5298> a sdo:Person ;
+    sdo:familyName "van Leeuwen" ;
+    sdo:givenName "Bas" ;
+    sdo:name "Bas van Leeuwen" ;
+    sdo:worksFor <https://orcid.org/0000-0001-7817-5298/employment/23114105>,
+        <https://orcid.org/0000-0001-7817-5298/employment/6646125> .
+

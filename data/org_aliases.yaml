@@ -1,0 +1,16 @@
+# Manual dedup overrides for scripts/build_colleague_graph.py.
+#
+# ORCID doesn't always attach a ROR/FUNDREF identifier consistently -
+# the same real institution can show up under different identifiers (or
+# no identifier at all) depending on which colleague's record and which
+# activity type (employment vs. funder) it came from. When you spot a
+# duplicate in data/colleagues.ttl, add a line here mapping the URI the
+# script minted to the canonical one it should use instead, then rebuild.
+#
+# key: URI the script would otherwise mint (a urn:orcidgraph:org:... slug,
+#      or a FUNDREF/other identifier URL)
+# value: canonical URI to use instead (normally the ROR one)
+
+"urn:orcidgraph:org:internationaal-instituut-voor-sociale-geschiedenis": "https://ror.org/05dq4pp56"
+"http://dx.doi.org/10.13039/501100001716": "https://ror.org/05dq4pp56"
+"urn:orcidgraph:org:vrije-universiteit-amsterdam": "https://ror.org/008xxew50"

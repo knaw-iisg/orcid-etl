@@ -1,0 +1,10 @@
+# Colleagues included in the ORCID-derived RDF graph (scripts/build_colleague_graph.py).
+# Add a new colleague by adding a line below with their ORCID iD, then rebuild:
+#   python3 scripts/build_colleague_graph.py
+
+- orcid: "0000-0003-3902-3720"  # Richard Zijdeman
+- orcid: "0000-0002-2267-1679"  # Rick Mourits
+- orcid: "0000-0001-6394-260X"  # Rombert Stapel
+- orcid: "0000-0002-8666-0047"  # Gijs Kessler
+- orcid: "0000-0001-7817-5298"  # Bas van Leeuwen
+- orcid: "0000-0003-0165-8341"  # Ivo Zandhuis

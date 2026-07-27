@@ -1,0 +1,317 @@
+"""
+Builds data/colleagues.ttl: an RDF graph, in schema.org (sdo) terms,
+describing the colleagues listed in data/colleagues.yaml, sourced from
+their public ORCID records (profile, employment, works, and fundings —
+education and other affiliation/activity types are intentionally left
+out).
+
+    python3 -m venv .venv && source .venv/bin/activate
+    pip install -r scripts/requirements.txt
+    python3 scripts/build_colleague_graph.py
+
+Re-run whenever data/colleagues.yaml changes. Add --refresh to bypass
+the local cache in data/orcid_cache/ and re-fetch fresh ORCID data.
+"""
+import argparse
+import re
+from pathlib import Path
+
+import sys
+
+import requests
+import yaml
+from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib.namespace import RDF, XSD
+
+from orcid_client import fetch_record
+from quality_gate import apply_quality_gate, write_report
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+COLLEAGUES_FILE = REPO_ROOT / "data" / "colleagues.yaml"
+ORG_ALIASES_FILE = REPO_ROOT / "data" / "org_aliases.yaml"
+DEPARTMENT_OVERRIDES_FILE = REPO_ROOT / "data" / "org_department_overrides.yaml"
+CACHE_DIR = REPO_ROOT / "data" / "orcid_cache"
+OUTPUT_PATH = REPO_ROOT / "data" / "colleagues.ttl"
+QUALITY_REPORT_PATH = REPO_ROOT / "data" / "colleague_orcid_issues.md"
+
+SDO = Namespace("https://schema.org/")
+LOCAL_ORG = Namespace("urn:orcidgraph:org:")
+LOCAL_PERIODICAL = Namespace("urn:orcidgraph:periodical:")
+
+# Not a real vocabulary - used to attach a human-readable "why this might
+# get flagged" hint to activity nodes at mapping time (see add_employments
+# below), for quality_gate.write_report to read before pruning. Never
+# meant to survive into the published graph: it's only ever set on nodes
+# that, by construction, are about to fail the SHACL check and get pruned.
+INTERNAL = Namespace("urn:orcidgraph:internal:")
+
+# Blank nodes get a fresh random ID every run, which reshuffles the
+# serialized Turtle output even when the data hasn't changed. Periodicals
+# and addresses get deterministic URIs instead, derived from content that
+# already uniquely identifies them - this also lets identical journal
+# names across different works/colleagues share one node.
+
+# Populated from ORG_ALIASES_FILE in main(); org_uri() consults it to merge
+# organization nodes that ORCID represents inconsistently across records.
+ORG_ALIASES = {}
+
+# Populated from DEPARTMENT_OVERRIDES_FILE in main(); keyed by
+# (organization name, department name) -> override entry. add_employments
+# consults it to use a named department's own organization as the
+# sdo:worksFor target instead of the umbrella org ORCID lists.
+DEPARTMENT_OVERRIDES = {}
+
+# ORCID work "type" -> closest schema.org type. Anything not listed here
+# falls back to the generic sdo:CreativeWork.
+WORK_TYPE_MAP = {
+    "journal-article": SDO.ScholarlyArticle,
+    "book": SDO.Book,
+    "book-chapter": SDO.Chapter,
+    "dissertation-thesis": SDO.Thesis,
+    "dataset": SDO.Dataset,
+    "report": SDO.Report,
+    "conference-paper": SDO.ScholarlyArticle,
+    "conference-abstract": SDO.ScholarlyArticle,
+    "preprint": SDO.ScholarlyArticle,
+    "working-paper": SDO.ScholarlyArticle,
+}
+
+
+def slugify(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def format_date(d):
+    """ORCID dates are partial (year, or year+month, or full). Returns an
+    xsd:date string anchored to day/month 01 when missing, or None."""
+    if not d or not d.get("year"):
+        return None
+    year = d["year"]["value"]
+    month = (d.get("month") or {}).get("value") or "01"
+    day = (d.get("day") or {}).get("value") or "01"
+    return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
+
+
+def external_id(summary, id_type):
+    for e in summary.get("external-ids", {}).get("external-id", []) or []:
+        if e["external-id-type"] == id_type:
+            return e["external-id-value"]
+    return None
+
+
+def activity_uri(summary):
+    """ORCID includes a stable permalink path on every activity summary
+    (e.g. /0000-.../employment/25933636) - reuse it as the node's IRI."""
+    return URIRef(f"https://orcid.org{summary['path']}")
+
+
+def org_uri(org):
+    dis = org.get("disambiguated-organization")
+    ident = dis.get("disambiguated-organization-identifier") if dis else None
+    # ROR/FUNDREF identifiers are already dereferenceable URLs; reuse them
+    # so the same organization is shared across colleagues. Other sources
+    # (e.g. RINGGOLD) are bare numbers, and orgs with no disambiguation at
+    # all - both fall back to a name-derived local URI below.
+    raw_uri = ident if (ident and ident.startswith("http")) else str(LOCAL_ORG[slugify(org["name"])])
+    return URIRef(ORG_ALIASES.get(raw_uri, raw_uri))
+
+
+def add_organization(g, org):
+    uri = org_uri(org)
+    g.add((uri, RDF.type, SDO.Organization))
+    g.add((uri, SDO.name, Literal(org["name"])))
+
+    # Record an explicit sdo:identifier whenever the final URI (native or
+    # resolved via data/org_aliases.yaml) is a real dereferenceable ID, not
+    # our own urn:orcidgraph:org: fallback. This is what
+    # data/shapes/organization_quality.ttl checks for.
+    if str(uri).startswith("http"):
+        dis = org.get("disambiguated-organization") or {}
+        source = dis.get("disambiguation-source", "manual-alias")
+        identifier_node = URIRef(f"{uri}#identifier")
+        g.add((identifier_node, RDF.type, SDO.PropertyValue))
+        g.add((identifier_node, SDO.propertyID, Literal(source)))
+        g.add((identifier_node, SDO.value, Literal(str(uri))))
+        g.add((uri, SDO.identifier, identifier_node))
+
+    address = org.get("address")
+    if address:
+        # One org has one address, so hanging the URI off the org's own
+        # URI is deterministic and avoids needing a blank node.
+        addr_node = URIRef(f"{uri}#address")
+        g.add((addr_node, RDF.type, SDO.PostalAddress))
+        if address.get("city"):
+            g.add((addr_node, SDO.addressLocality, Literal(address["city"])))
+        if address.get("country"):
+            g.add((addr_node, SDO.addressCountry, Literal(address["country"])))
+        g.add((uri, SDO.address, addr_node))
+    return uri
+
+
+def synthetic_org(spec):
+    """Builds an org dict shaped like ORCID's own "organization" field,
+    from a data/org_department_overrides.yaml entry."""
+    return {
+        "name": spec["name"],
+        "disambiguated-organization": {
+            "disambiguated-organization-identifier": spec["ror"],
+            "disambiguation-source": "ROR",
+        },
+    }
+
+
+def add_employments(g, person_uri, activities):
+    for group in activities.get("employments", {}).get("affiliation-group", []):
+        for summary in group["summaries"]:
+            s = summary["employment-summary"]
+            role_uri = activity_uri(s)
+            g.add((role_uri, RDF.type, SDO.OrganizationRole))
+            g.add((role_uri, SDO.roleName, Literal(s.get("role-title") or "Employee")))
+            start = format_date(s.get("start-date"))
+            end = format_date(s.get("end-date"))
+            if start:
+                g.add((role_uri, SDO.startDate, Literal(start, datatype=XSD.date)))
+            if end:
+                g.add((role_uri, SDO.endDate, Literal(end, datatype=XSD.date)))
+
+            org_dict = s["organization"]
+            department = s.get("department-name")
+            override = DEPARTMENT_OVERRIDES.get((org_dict["name"], department))
+            if override:
+                org_dict = synthetic_org(override["organization"])
+            else:
+                # Near miss: this org matches a known umbrella institution
+                # in org_department_overrides.yaml, but not with this
+                # department (or none was given) - worth telling the
+                # colleague exactly what to add rather than leaving them
+                # to guess.
+                known_departments = sorted({
+                    dept for (name, dept) in DEPARTMENT_OVERRIDES if name == org_dict["name"] and dept
+                })
+                if known_departments:
+                    g.add((role_uri, INTERNAL.reportReason, Literal(
+                        "no institutional identifier (e.g. ROR) attached in ORCID for this employer. "
+                        f"If this role is actually within {' or '.join(known_departments)}, "
+                        "add that as the department on this entry in ORCID to resolve it automatically."
+                    )))
+
+            org = add_organization(g, org_dict)
+            g.add((role_uri, SDO.worksFor, org))
+            g.add((person_uri, SDO.worksFor, role_uri))
+
+            if override and override.get("parent_organization"):
+                parent = add_organization(g, synthetic_org(override["parent_organization"]))
+                g.add((org, SDO.parentOrganization, parent))
+
+
+def add_works(g, person_uri, activities):
+    for group in activities.get("works", {}).get("group", []):
+        for s in group["work-summary"]:
+            doi = external_id(s, "doi")
+            work_uri = URIRef(f"https://doi.org/{doi}") if doi else activity_uri(s)
+            sdo_type = WORK_TYPE_MAP.get(s.get("type"), SDO.CreativeWork)
+            g.add((work_uri, RDF.type, sdo_type))
+
+            title = (s.get("title") or {}).get("title", {}).get("value")
+            if title:
+                g.add((work_uri, SDO.name, Literal(title)))
+
+            pub_date = format_date(s.get("publication-date"))
+            if pub_date:
+                g.add((work_uri, SDO.datePublished, Literal(pub_date, datatype=XSD.date)))
+
+            journal = (s.get("journal-title") or {}).get("value")
+            if journal:
+                periodical = LOCAL_PERIODICAL[slugify(journal)]
+                g.add((periodical, RDF.type, SDO.Periodical))
+                g.add((periodical, SDO.name, Literal(journal)))
+                g.add((work_uri, SDO.isPartOf, periodical))
+
+            g.add((work_uri, SDO.author, person_uri))
+
+
+def add_fundings(g, person_uri, activities):
+    for group in activities.get("fundings", {}).get("group", []):
+        for s in group["funding-summary"]:
+            grant_uri = activity_uri(s)
+            g.add((grant_uri, RDF.type, SDO.MonetaryGrant))
+
+            title = (s.get("title") or {}).get("title", {}).get("value")
+            if title:
+                g.add((grant_uri, SDO.name, Literal(title)))
+
+            if s.get("organization"):
+                funder = add_organization(g, s["organization"])
+                g.add((grant_uri, SDO.funder, funder))
+
+            # schema.org has no dedicated "recipient" property on Grant;
+            # fundedItem is the documented way to point a Grant at the
+            # Person it funded (inverse: sdo:funding on the Person).
+            g.add((grant_uri, SDO.fundedItem, person_uri))
+
+            grant_number = external_id(s, "grant_number")
+            if grant_number:
+                g.add((grant_uri, SDO.identifier, Literal(grant_number)))
+
+
+def add_person(g, orcid_id, record):
+    person_uri = URIRef(f"https://orcid.org/{orcid_id}")
+    g.add((person_uri, RDF.type, SDO.Person))
+
+    name = record.get("person", {}).get("name") or {}
+    given = (name.get("given-names") or {}).get("value")
+    family = (name.get("family-name") or {}).get("value")
+    if given:
+        g.add((person_uri, SDO.givenName, Literal(given)))
+    if family:
+        g.add((person_uri, SDO.familyName, Literal(family)))
+    if given or family:
+        g.add((person_uri, SDO.name, Literal(" ".join(p for p in (given, family) if p))))
+
+    activities = record.get("activities-summary", {})
+    add_employments(g, person_uri, activities)
+    add_works(g, person_uri, activities)
+    add_fundings(g, person_uri, activities)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--refresh", action="store_true", help="bypass the local ORCID response cache")
+    args = parser.parse_args()
+
+    global ORG_ALIASES, DEPARTMENT_OVERRIDES
+    if ORG_ALIASES_FILE.exists():
+        ORG_ALIASES = yaml.safe_load(ORG_ALIASES_FILE.read_text()) or {}
+    if DEPARTMENT_OVERRIDES_FILE.exists():
+        entries = yaml.safe_load(DEPARTMENT_OVERRIDES_FILE.read_text()) or []
+        DEPARTMENT_OVERRIDES = {(e["match_organization"], e["match_department"]): e for e in entries}
+
+    colleagues = yaml.safe_load(COLLEAGUES_FILE.read_text())
+
+    g = Graph()
+    g.bind("sdo", SDO)
+
+    skipped = []
+    for entry in colleagues:
+        orcid_id = entry["orcid"]
+        try:
+            record = fetch_record(orcid_id, CACHE_DIR, force_refresh=args.refresh)
+        except requests.exceptions.RequestException as e:
+            print(f"WARNING: skipping {orcid_id}, fetch failed: {e}", file=sys.stderr)
+            skipped.append(orcid_id)
+            continue
+        add_person(g, orcid_id, record)
+
+    quality_report = apply_quality_gate(g)
+    write_report(quality_report, QUALITY_REPORT_PATH)
+
+    g.serialize(destination=str(OUTPUT_PATH), format="turtle")
+    print(f"Wrote {len(g)} triples to {OUTPUT_PATH}")
+    if quality_report:
+        print(f"{len(quality_report)} entr(ies) failed quality checks - see {QUALITY_REPORT_PATH}", file=sys.stderr)
+    if skipped:
+        print(f"Skipped {len(skipped)} colleague(s) due to fetch errors: {', '.join(skipped)}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    main()

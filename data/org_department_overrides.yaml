@@ -1,0 +1,26 @@
+# Resolves cases where ORCID's "organization" field names an umbrella
+# institution but the department field names the actual place someone
+# works - e.g. IISH staff are formally employed under KNAW, with IISH
+# listed as the department. A matching entry uses the department's own
+# organization as the sdo:worksFor target instead of the umbrella one, so
+# "everyone at IISH" is one direct query, not a traversal through
+# sdo:parentOrganization. The parent relationship itself is still
+# recorded once (via parent_organization), for anyone who wants it.
+#
+# Employment entries that name ONLY the umbrella org, with no matching
+# department, are NOT resolved here - they're left for the SHACL gate in
+# data/shapes/ to flag, since ORCID doesn't tell us what they actually meant.
+#
+# match_organization / match_department: exact strings as they appear in
+#   the ORCID employment entry's organization name / department-name.
+# organization: the actual sdo:worksFor target to use instead.
+# parent_organization: asserted once via sdo:parentOrganization.
+
+- match_organization: "Royal Netherlands Academy of Arts & Sciences (KNAW)"
+  match_department: "International Institute of Social History (IISH)"
+  organization:
+    name: "International Institute of Social History"
+    ror: "https://ror.org/05dq4pp56"
+  parent_organization:
+    name: "Royal Netherlands Academy of Arts and Sciences"
+    ror: "https://ror.org/043c0p156"
