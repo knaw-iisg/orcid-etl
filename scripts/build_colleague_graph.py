@@ -1,16 +1,18 @@
 """
-Builds colleagues.ttl: an RDF graph, in schema.org (sdo) terms, describing
-the colleagues listed in colleagues.yaml, sourced from their public ORCID
-records (profile, employment, works, and fundings — education and other
-affiliation/activity types are intentionally left out).
+Builds knaw-iisg-orcid.ttl: an RDF graph, in schema.org (sdo) terms,
+describing the colleagues listed in colleagues.yaml, sourced from their
+public ORCID records (profile, employment, works, and fundings —
+education and other affiliation/activity types are intentionally left
+out).
 
 Colleagues are personally-identifying curation data, not code, so they
-and everything derived from them (colleagues.yaml, colleagues.ttl, the
-quality report and its per-colleague snippets, the ORCID response cache)
-live outside this repo entirely, in --data-dir (default: $COLLEAGUE_GRAPH_DATA_DIR
-or ~/colleague-graph-data). Only the org_aliases.yaml/org_department_overrides.yaml
-config and the SHACL shapes stay in this repo's data/ folder, since they're
-reusable across any colleague list.
+and everything derived from them (colleagues.yaml, knaw-iisg-orcid.ttl,
+the quality report and its per-colleague snippets, the ORCID response
+cache) live outside this repo entirely, in --data-dir (default:
+$COLLEAGUE_GRAPH_DATA_DIR or ~/colleague-graph-data). Only the
+org_aliases.yaml/org_department_overrides.yaml config and the SHACL
+shapes stay in this repo's data/ folder, since they're reusable across
+any colleague list.
 
     python3 -m venv .venv && source .venv/bin/activate
     pip install -r scripts/requirements.txt
@@ -305,9 +307,9 @@ def main():
     data_dir = resolve_data_dir(args.data_dir)
     colleagues_file = data_dir / "colleagues.yaml"
     cache_dir = data_dir / "orcid_cache"
-    output_path = data_dir / "colleagues.ttl"
-    quality_report_path = data_dir / "colleague_orcid_issues.md"
-    quality_report_person_dir = data_dir / "colleague_orcid_issues"
+    output_path = data_dir / "knaw-iisg-orcid.ttl"
+    quality_report_path = data_dir / "knaw-iisg-orcid-issues.md"
+    quality_report_person_dir = data_dir / "knaw-iisg-orcid-issues"
 
     if not colleagues_file.exists():
         sys.exit(

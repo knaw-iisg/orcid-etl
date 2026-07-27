@@ -1,7 +1,7 @@
 # SHACL shapes describing what "good" organization data looks like in the
 # colleague graph. Checked by scripts/quality_gate.py after the graph is
-# built. Organizations that fail get dropped from data/colleagues.ttl and
-# reported in data/colleague_orcid_issues.md instead, since the fix lives
+# built. Organizations that fail get dropped from knaw-iisg-orcid.ttl and
+# reported in knaw-iisg-orcid-issues.md instead, since the fix lives
 # in each colleague's own ORCID record, not in this repo.
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .

@@ -1,4 +1,4 @@
-# colleague-graph
+# knaw-iisg-orcid
 
 Builds an RDF graph (schema.org / sdo terms) describing colleagues, sourced
 from their public ORCID records: profile, employment, works, and fundings.
@@ -29,8 +29,8 @@ Then:
 python3 scripts/build_colleague_graph.py
 ```
 
-This writes `<data-dir>/colleagues.ttl`. Pass `--refresh` to bypass the
-local ORCID response cache in `<data-dir>/orcid_cache/` and re-fetch
+This writes `<data-dir>/knaw-iisg-orcid.ttl`. Pass `--refresh` to bypass
+the local ORCID response cache in `<data-dir>/orcid_cache/` and re-fetch
 fresh data.
 
 ## Data quality
@@ -47,9 +47,9 @@ provides them. Two curated files handle the cases it doesn't:
 
 Organizations that still have no resolvable identifier fail the SHACL
 shape in `data/shapes/organization_quality.ttl` and are excluded from
-`<data-dir>/colleagues.ttl`. Instead, they're written to
-`<data-dir>/colleague_orcid_issues.md` — a plain-language report of what
+`<data-dir>/knaw-iisg-orcid.ttl`. Instead, they're written to
+`<data-dir>/knaw-iisg-orcid-issues.md` — a plain-language report of what
 to go fix in ORCID directly, grouped by colleague — plus a paste-able
-per-colleague snippet in `<data-dir>/colleague_orcid_issues/{lastname}-{orcid}.md`
+per-colleague snippet in `<data-dir>/knaw-iisg-orcid-issues/{lastname}-{orcid}.md`
 for messaging that person directly. Re-running the script picks up the
 fix automatically.
