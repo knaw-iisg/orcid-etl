@@ -107,7 +107,11 @@ def format_date(d):
 
 
 def external_id(summary, id_type):
-    for e in summary.get("external-ids", {}).get("external-id", []) or []:
+    # ORCID sometimes has "external-ids": null rather than omitting the key,
+    # so summary.get("external-ids", {}) isn't enough - .get()'s default only
+    # kicks in when the key is *missing*, not when its value is None.
+    external_ids = (summary.get("external-ids") or {}).get("external-id", []) or []
+    for e in external_ids:
         if e["external-id-type"] == id_type:
             return e["external-id-value"]
     return None
@@ -175,7 +179,7 @@ def synthetic_org(spec):
 
 
 def add_employments(g, person_uri, activities):
-    for group in activities.get("employments", {}).get("affiliation-group", []):
+    for group in (activities.get("employments") or {}).get("affiliation-group", []):
         for summary in group["summaries"]:
             s = summary["employment-summary"]
             role_uri = activity_uri(s)
@@ -219,14 +223,14 @@ def add_employments(g, person_uri, activities):
 
 
 def add_works(g, person_uri, activities):
-    for group in activities.get("works", {}).get("group", []):
+    for group in (activities.get("works") or {}).get("group", []):
         for s in group["work-summary"]:
             doi = external_id(s, "doi")
             work_uri = URIRef(f"https://doi.org/{doi}") if doi else activity_uri(s)
             sdo_type = WORK_TYPE_MAP.get(s.get("type"), SDO.CreativeWork)
             g.add((work_uri, RDF.type, sdo_type))
 
-            title = (s.get("title") or {}).get("title", {}).get("value")
+            title = ((s.get("title") or {}).get("title") or {}).get("value")
             if title:
                 g.add((work_uri, SDO.name, Literal(title)))
 
@@ -245,12 +249,12 @@ def add_works(g, person_uri, activities):
 
 
 def add_fundings(g, person_uri, activities):
-    for group in activities.get("fundings", {}).get("group", []):
+    for group in (activities.get("fundings") or {}).get("group", []):
         for s in group["funding-summary"]:
             grant_uri = activity_uri(s)
             g.add((grant_uri, RDF.type, SDO.MonetaryGrant))
 
-            title = (s.get("title") or {}).get("title", {}).get("value")
+            title = ((s.get("title") or {}).get("title") or {}).get("value")
             if title:
                 g.add((grant_uri, SDO.name, Literal(title)))
 
