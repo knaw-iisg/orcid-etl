@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 Colleagues are personally-identifying curation data, not code, so they and
 everything derived from them live outside this repo, in a data directory
-(default `~/colleague-graph-data`; override with `--data-dir` or
+(default `~/knaw-iisg-orcid-data`; override with `--data-dir` or
 `$COLLEAGUE_GRAPH_DATA_DIR`).
 
 Add colleagues by ORCID iD to `<data-dir>/colleagues.yaml`:

@@ -9,7 +9,7 @@ Colleagues are personally-identifying curation data, not code, so they
 and everything derived from them (colleagues.yaml, knaw-iisg-orcid.ttl,
 the quality report and its per-colleague snippets, the ORCID response
 cache) live outside this repo entirely, in --data-dir (default:
-$COLLEAGUE_GRAPH_DATA_DIR or ~/colleague-graph-data). Only the
+$COLLEAGUE_GRAPH_DATA_DIR or ~/knaw-iisg-orcid-data). Only the
 org_aliases.yaml/org_department_overrides.yaml config and the SHACL
 shapes stay in this repo's data/ folder, since they're reusable across
 any colleague list.
@@ -40,7 +40,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 ORG_ALIASES_FILE = REPO_ROOT / "data" / "org_aliases.yaml"
 DEPARTMENT_OVERRIDES_FILE = REPO_ROOT / "data" / "org_department_overrides.yaml"
 
-DEFAULT_DATA_DIR = Path.home() / "colleague-graph-data"
+DEFAULT_DATA_DIR = Path.home() / "knaw-iisg-orcid-data"
 
 
 def resolve_data_dir(cli_value):
@@ -300,7 +300,7 @@ def main():
     parser.add_argument(
         "--data-dir",
         help="where colleagues.yaml lives and outputs are written "
-             "(default: $COLLEAGUE_GRAPH_DATA_DIR or ~/colleague-graph-data)",
+             "(default: $COLLEAGUE_GRAPH_DATA_DIR or ~/knaw-iisg-orcid-data)",
     )
     args = parser.parse_args()
 
