@@ -247,7 +247,7 @@ def add_works(g, person_uri, activities):
                 g.add((periodical, SDO.name, Literal(journal)))
                 g.add((work_uri, SDO.isPartOf, periodical))
 
-            g.add((work_uri, SDO.author, person_uri))
+            g.add((work_uri, SDO.creator, person_uri))
 
 
 def add_fundings(g, person_uri, activities):
