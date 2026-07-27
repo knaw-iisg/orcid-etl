@@ -1,18 +1,26 @@
 """
-Builds data/colleagues.ttl: an RDF graph, in schema.org (sdo) terms,
-describing the colleagues listed in data/colleagues.yaml, sourced from
-their public ORCID records (profile, employment, works, and fundings —
-education and other affiliation/activity types are intentionally left
-out).
+Builds colleagues.ttl: an RDF graph, in schema.org (sdo) terms, describing
+the colleagues listed in colleagues.yaml, sourced from their public ORCID
+records (profile, employment, works, and fundings — education and other
+affiliation/activity types are intentionally left out).
+
+Colleagues are personally-identifying curation data, not code, so they
+and everything derived from them (colleagues.yaml, colleagues.ttl, the
+quality report and its per-colleague snippets, the ORCID response cache)
+live outside this repo entirely, in --data-dir (default: $COLLEAGUE_GRAPH_DATA_DIR
+or ~/colleague-graph-data). Only the org_aliases.yaml/org_department_overrides.yaml
+config and the SHACL shapes stay in this repo's data/ folder, since they're
+reusable across any colleague list.
 
     python3 -m venv .venv && source .venv/bin/activate
     pip install -r scripts/requirements.txt
     python3 scripts/build_colleague_graph.py
 
-Re-run whenever data/colleagues.yaml changes. Add --refresh to bypass
-the local cache in data/orcid_cache/ and re-fetch fresh ORCID data.
+Re-run whenever colleagues.yaml changes. Add --refresh to bypass the
+local ORCID response cache and re-fetch fresh data.
 """
 import argparse
+import os
 import re
 from pathlib import Path
 
@@ -24,15 +32,21 @@ from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, XSD
 
 from orcid_client import fetch_record
-from quality_gate import apply_quality_gate, write_report
+from quality_gate import apply_quality_gate, write_report, write_person_reports
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-COLLEAGUES_FILE = REPO_ROOT / "data" / "colleagues.yaml"
 ORG_ALIASES_FILE = REPO_ROOT / "data" / "org_aliases.yaml"
 DEPARTMENT_OVERRIDES_FILE = REPO_ROOT / "data" / "org_department_overrides.yaml"
-CACHE_DIR = REPO_ROOT / "data" / "orcid_cache"
-OUTPUT_PATH = REPO_ROOT / "data" / "colleagues.ttl"
-QUALITY_REPORT_PATH = REPO_ROOT / "data" / "colleague_orcid_issues.md"
+
+DEFAULT_DATA_DIR = Path.home() / "colleague-graph-data"
+
+
+def resolve_data_dir(cli_value):
+    if cli_value:
+        return Path(cli_value).expanduser()
+    if os.environ.get("COLLEAGUE_GRAPH_DATA_DIR"):
+        return Path(os.environ["COLLEAGUE_GRAPH_DATA_DIR"]).expanduser()
+    return DEFAULT_DATA_DIR
 
 SDO = Namespace("https://schema.org/")
 LOCAL_ORG = Namespace("urn:orcidgraph:org:")
@@ -277,7 +291,26 @@ def add_person(g, orcid_id, record):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--refresh", action="store_true", help="bypass the local ORCID response cache")
+    parser.add_argument(
+        "--data-dir",
+        help="where colleagues.yaml lives and outputs are written "
+             "(default: $COLLEAGUE_GRAPH_DATA_DIR or ~/colleague-graph-data)",
+    )
     args = parser.parse_args()
+
+    data_dir = resolve_data_dir(args.data_dir)
+    colleagues_file = data_dir / "colleagues.yaml"
+    cache_dir = data_dir / "orcid_cache"
+    output_path = data_dir / "colleagues.ttl"
+    quality_report_path = data_dir / "colleague_orcid_issues.md"
+    quality_report_person_dir = data_dir / "colleague_orcid_issues"
+
+    if not colleagues_file.exists():
+        sys.exit(
+            f"No colleagues.yaml found at {colleagues_file}\n"
+            f"Create it there (one '- orcid: \"0000-...\"' entry per colleague), "
+            f"or pass --data-dir / set $COLLEAGUE_GRAPH_DATA_DIR to point elsewhere."
+        )
 
     global ORG_ALIASES, DEPARTMENT_OVERRIDES
     if ORG_ALIASES_FILE.exists():
@@ -286,7 +319,7 @@ def main():
         entries = yaml.safe_load(DEPARTMENT_OVERRIDES_FILE.read_text()) or []
         DEPARTMENT_OVERRIDES = {(e["match_organization"], e["match_department"]): e for e in entries}
 
-    colleagues = yaml.safe_load(COLLEAGUES_FILE.read_text())
+    colleagues = yaml.safe_load(colleagues_file.read_text())
 
     g = Graph()
     g.bind("sdo", SDO)
@@ -295,7 +328,7 @@ def main():
     for entry in colleagues:
         orcid_id = entry["orcid"]
         try:
-            record = fetch_record(orcid_id, CACHE_DIR, force_refresh=args.refresh)
+            record = fetch_record(orcid_id, cache_dir, force_refresh=args.refresh)
         except requests.exceptions.RequestException as e:
             print(f"WARNING: skipping {orcid_id}, fetch failed: {e}", file=sys.stderr)
             skipped.append(orcid_id)
@@ -303,12 +336,13 @@ def main():
         add_person(g, orcid_id, record)
 
     quality_report = apply_quality_gate(g)
-    write_report(quality_report, QUALITY_REPORT_PATH)
+    write_report(quality_report, quality_report_path)
+    write_person_reports(quality_report, quality_report_person_dir)
 
-    g.serialize(destination=str(OUTPUT_PATH), format="turtle")
-    print(f"Wrote {len(g)} triples to {OUTPUT_PATH}")
+    g.serialize(destination=str(output_path), format="turtle")
+    print(f"Wrote {len(g)} triples to {output_path}")
     if quality_report:
-        print(f"{len(quality_report)} entr(ies) failed quality checks - see {QUALITY_REPORT_PATH}", file=sys.stderr)
+        print(f"{len(quality_report)} entr(ies) failed quality checks - see {quality_report_path}", file=sys.stderr)
     if skipped:
         print(f"Skipped {len(skipped)} colleague(s) due to fetch errors: {', '.join(skipped)}", file=sys.stderr)
 

@@ -12,14 +12,26 @@ pip install -r requirements.txt
 
 ## Usage
 
-Add colleagues by ORCID iD to `data/colleagues.yaml`, then:
+Colleagues are personally-identifying curation data, not code, so they and
+everything derived from them live outside this repo, in a data directory
+(default `~/colleague-graph-data`; override with `--data-dir` or
+`$COLLEAGUE_GRAPH_DATA_DIR`).
+
+Add colleagues by ORCID iD to `<data-dir>/colleagues.yaml`:
+
+```yaml
+- orcid: "0000-0003-3902-3720"  # Richard Zijdeman
+```
+
+Then:
 
 ```
 python3 scripts/build_colleague_graph.py
 ```
 
-This writes `data/colleagues.ttl`. Pass `--refresh` to bypass the local
-ORCID response cache in `data/orcid_cache/` and re-fetch fresh data.
+This writes `<data-dir>/colleagues.ttl`. Pass `--refresh` to bypass the
+local ORCID response cache in `<data-dir>/orcid_cache/` and re-fetch
+fresh data.
 
 ## Data quality
 
@@ -35,7 +47,9 @@ provides them. Two curated files handle the cases it doesn't:
 
 Organizations that still have no resolvable identifier fail the SHACL
 shape in `data/shapes/organization_quality.ttl` and are excluded from
-`data/colleagues.ttl`. Instead, they're written to
-`data/colleague_orcid_issues.md` — a plain-language report, per colleague,
-of what to go fix in ORCID directly (with a link to the exact entry).
-Re-running the script picks up the fix automatically.
+`<data-dir>/colleagues.ttl`. Instead, they're written to
+`<data-dir>/colleague_orcid_issues.md` — a plain-language report of what
+to go fix in ORCID directly, grouped by colleague — plus a paste-able
+per-colleague snippet in `<data-dir>/colleague_orcid_issues/{lastname}-{orcid}.md`
+for messaging that person directly. Re-running the script picks up the
+fix automatically.

@@ -6,6 +6,7 @@ removed from the graph along with the specific employment/funding entry
 that referenced it, and returned as a report so a human-readable summary
 can be written for the colleague to act on in ORCID itself.
 """
+import re
 from pathlib import Path
 
 from pyshacl import validate
@@ -42,6 +43,7 @@ def _describe(g, person, activity_uri, org_name, kind):
     reason = g.value(activity_uri, INTERNAL.reportReason) or DEFAULT_REASON
     return {
         "person_name": str(g.value(person, SDO.name)) if person else "unknown colleague",
+        "person_family_name": str(g.value(person, SDO.familyName)) if person else None,
         "person_orcid": str(person) if person else None,
         "organization": str(org_name) if org_name else "unnamed organization",
         "kind": kind,
@@ -74,14 +76,31 @@ def apply_quality_gate(g):
     return report
 
 
+def _group_by_person(report):
+    by_person = {}
+    for item in report:
+        by_person.setdefault((item["person_name"], item["person_orcid"]), []).append(item)
+    return by_person
+
+
+def _slugify(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def _issue_lines(items):
+    lines = []
+    for item in items:
+        lines.append(f"- {item['kind']} at \"{item['organization']}\": {item['reason']}")
+        lines.append(f"  {item['activity_url']}")
+    return lines
+
+
 def write_report(report, path):
     if not report:
         Path(path).unlink(missing_ok=True)
         return
 
-    by_person = {}
-    for item in report:
-        by_person.setdefault((item["person_name"], item["person_orcid"]), []).append(item)
+    by_person = _group_by_person(report)
 
     lines = [
         "# ORCID entries to fix",
@@ -95,9 +114,38 @@ def write_report(report, path):
     for (name, orcid), items in sorted(by_person.items()):
         lines.append(f"## {name} ({orcid})")
         lines.append("")
-        for item in items:
-            lines.append(f"- {item['kind']} at \"{item['organization']}\": {item['reason']}")
-            lines.append(f"  {item['activity_url']}")
+        lines.extend(_issue_lines(items))
         lines.append("")
 
     Path(path).write_text("\n".join(lines))
+
+
+def write_person_reports(report, reports_dir):
+    """One paste-able snippet per colleague (for emailing/messaging them
+    directly), alongside the combined report from write_report(). Stale
+    snippets for colleagues who no longer have any open issues are removed."""
+    reports_dir = Path(reports_dir)
+    by_person = _group_by_person(report)
+
+    existing = set(reports_dir.glob("*.md")) if reports_dir.exists() else set()
+    written = set()
+
+    for (name, orcid), items in by_person.items():
+        if not orcid:
+            continue
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        orcid_id = orcid.rsplit("/", 1)[-1]
+        family_name = items[0].get("person_family_name")
+        stem = f"{_slugify(family_name)}-{orcid_id}" if family_name else orcid_id
+        path = reports_dir / f"{stem}.md"
+        lines = [
+            f"Hi — a couple of things in your ORCID record ({orcid}) would help this",
+            "colleague graph link up cleanly if you have a moment to fix them:",
+            "",
+        ]
+        lines.extend(_issue_lines(items))
+        path.write_text("\n".join(lines) + "\n")
+        written.add(path)
+
+    for stale in existing - written:
+        stale.unlink()
