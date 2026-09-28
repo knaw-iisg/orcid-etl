@@ -1,4 +1,0 @@
-rdflib
-requests
-pyyaml
-pyshacl

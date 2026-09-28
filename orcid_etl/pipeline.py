@@ -1,81 +1,23 @@
+"""Maps one ORCID record (profile, employment, works, fundings - education
+and other affiliation/activity types are intentionally left out) to RDF in
+schema.org (sdo) terms.
+
+Organization identity is handled directly by ORCID/ROR/FUNDREF/DOI: unlike
+biblio-etl/archive-etl/findingaid-etl, which mint bare local authority IRIs
+that authorities-etl later fills in with names and sameAs links, every
+Person/Organization/CreativeWork node here is minted at its own real,
+dereferenceable external identifier from the start (orcid.org, ror.org,
+doi.org). There is deliberately no local "authority" layer to build.
 """
-Builds knaw-iisg-orcid.ttl: an RDF graph, in schema.org (sdo) terms,
-describing the colleagues listed in colleagues.yaml, sourced from their
-public ORCID records (profile, employment, works, and fundings —
-education and other affiliation/activity types are intentionally left
-out).
+from __future__ import annotations
 
-Colleagues are personally-identifying curation data, not code, so they
-and everything derived from them (colleagues.yaml, knaw-iisg-orcid.ttl,
-the quality report and its per-colleague snippets, the ORCID response
-cache) live outside this repo entirely, in --data-dir (default:
-$COLLEAGUE_GRAPH_DATA_DIR or ~/knaw-iisg-orcid-data). Only the
-org_aliases.yaml/org_department_overrides.yaml config and the SHACL
-shapes stay in this repo's data/ folder, since they're reusable across
-any colleague list.
-
-    python3 -m venv .venv && source .venv/bin/activate
-    pip install -r scripts/requirements.txt
-    python3 scripts/build_colleague_graph.py
-
-Re-run whenever colleagues.yaml changes. Add --refresh to bypass the
-local ORCID response cache and re-fetch fresh data.
-"""
-import argparse
-import os
 import re
-from pathlib import Path
 
-import sys
-
-import requests
 import yaml
-from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF, XSD
 
-from orcid_client import fetch_record
-from quality_gate import apply_quality_gate, write_report, write_person_reports
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-ORG_ALIASES_FILE = REPO_ROOT / "data" / "org_aliases.yaml"
-DEPARTMENT_OVERRIDES_FILE = REPO_ROOT / "data" / "org_department_overrides.yaml"
-
-DEFAULT_DATA_DIR = Path.home() / "knaw-iisg-orcid-data"
-
-
-def resolve_data_dir(cli_value):
-    if cli_value:
-        return Path(cli_value).expanduser()
-    if os.environ.get("COLLEAGUE_GRAPH_DATA_DIR"):
-        return Path(os.environ["COLLEAGUE_GRAPH_DATA_DIR"]).expanduser()
-    return DEFAULT_DATA_DIR
-
-SDO = Namespace("https://schema.org/")
-LOCAL_ORG = Namespace("urn:orcidgraph:org:")
-LOCAL_PERIODICAL = Namespace("urn:orcidgraph:periodical:")
-
-# Not a real vocabulary - used to attach a human-readable "why this might
-# get flagged" hint to activity nodes at mapping time (see add_employments
-# below), for quality_gate.write_report to read before pruning. Never
-# meant to survive into the published graph: it's only ever set on nodes
-# that, by construction, are about to fail the SHACL check and get pruned.
-INTERNAL = Namespace("urn:orcidgraph:internal:")
-
-# Blank nodes get a fresh random ID every run, which reshuffles the
-# serialized Turtle output even when the data hasn't changed. Periodicals
-# and addresses get deterministic URIs instead, derived from content that
-# already uniquely identifies them - this also lets identical journal
-# names across different works/colleagues share one node.
-
-# Populated from ORG_ALIASES_FILE in main(); org_uri() consults it to merge
-# organization nodes that ORCID represents inconsistently across records.
-ORG_ALIASES = {}
-
-# Populated from DEPARTMENT_OVERRIDES_FILE in main(); keyed by
-# (organization name, department name) -> override entry. add_employments
-# consults it to use a named department's own organization as the
-# sdo:worksFor target instead of the umbrella org ORCID lists.
-DEPARTMENT_OVERRIDES = {}
+from .prefixes import INTERNAL, LOCAL_ORG, LOCAL_PERIODICAL, SDO
 
 # ORCID work "type" -> closest schema.org type. Anything not listed here
 # falls back to the generic sdo:CreativeWork.
@@ -93,11 +35,11 @@ WORK_TYPE_MAP = {
 }
 
 
-def slugify(name):
+def slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
-def format_date(d):
+def format_date(d: dict | None) -> str | None:
     """ORCID dates are partial (year, or year+month, or full). Returns an
     xsd:date string anchored to day/month 01 when missing, or None."""
     if not d or not d.get("year"):
@@ -108,7 +50,7 @@ def format_date(d):
     return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
 
 
-def external_id(summary, id_type):
+def external_id(summary: dict, id_type: str) -> str | None:
     # ORCID sometimes has "external-ids": null rather than omitting the key,
     # so summary.get("external-ids", {}) isn't enough - .get()'s default only
     # kicks in when the key is *missing*, not when its value is None.
@@ -119,13 +61,35 @@ def external_id(summary, id_type):
     return None
 
 
-def activity_uri(summary):
+def activity_uri(summary: dict) -> URIRef:
     """ORCID includes a stable permalink path on every activity summary
     (e.g. /0000-.../employment/25933636) - reuse it as the node's IRI."""
     return URIRef(f"https://orcid.org{summary['path']}")
 
 
-def org_uri(org):
+class OrgConfig:
+    """Loaded from data/org_aliases.yaml and data/org_department_overrides.yaml
+    -- see those files for why each exists. Not colleague data: reusable
+    across any colleague list, so (unlike colleagues.yaml) it lives in this
+    repo, not the external data-dir."""
+
+    def __init__(self, aliases: dict | None = None, department_overrides: dict | None = None):
+        self.aliases = aliases or {}
+        self.department_overrides = department_overrides or {}
+
+    @classmethod
+    def load(cls, aliases_path, department_overrides_path) -> "OrgConfig":
+        aliases = {}
+        if aliases_path.exists():
+            aliases = yaml.safe_load(aliases_path.read_text()) or {}
+        department_overrides = {}
+        if department_overrides_path.exists():
+            entries = yaml.safe_load(department_overrides_path.read_text()) or []
+            department_overrides = {(e["match_organization"], e["match_department"]): e for e in entries}
+        return cls(aliases, department_overrides)
+
+
+def org_uri(org: dict, config: OrgConfig) -> URIRef:
     dis = org.get("disambiguated-organization")
     ident = dis.get("disambiguated-organization-identifier") if dis else None
     # ROR/FUNDREF identifiers are already dereferenceable URLs; reuse them
@@ -133,11 +97,11 @@ def org_uri(org):
     # (e.g. RINGGOLD) are bare numbers, and orgs with no disambiguation at
     # all - both fall back to a name-derived local URI below.
     raw_uri = ident if (ident and ident.startswith("http")) else str(LOCAL_ORG[slugify(org["name"])])
-    return URIRef(ORG_ALIASES.get(raw_uri, raw_uri))
+    return URIRef(config.aliases.get(raw_uri, raw_uri))
 
 
-def add_organization(g, org):
-    uri = org_uri(org)
+def add_organization(g: Graph, org: dict, config: OrgConfig) -> URIRef:
+    uri = org_uri(org, config)
     g.add((uri, RDF.type, SDO.Organization))
     g.add((uri, SDO.name, Literal(org["name"])))
 
@@ -168,7 +132,7 @@ def add_organization(g, org):
     return uri
 
 
-def synthetic_org(spec):
+def synthetic_org(spec: dict) -> dict:
     """Builds an org dict shaped like ORCID's own "organization" field,
     from a data/org_department_overrides.yaml entry."""
     return {
@@ -180,7 +144,7 @@ def synthetic_org(spec):
     }
 
 
-def add_employments(g, person_uri, activities):
+def add_employments(g: Graph, person_uri: URIRef, activities: dict, config: OrgConfig) -> None:
     for group in (activities.get("employments") or {}).get("affiliation-group", []):
         for summary in group["summaries"]:
             s = summary["employment-summary"]
@@ -196,7 +160,7 @@ def add_employments(g, person_uri, activities):
 
             org_dict = s["organization"]
             department = s.get("department-name")
-            override = DEPARTMENT_OVERRIDES.get((org_dict["name"], department))
+            override = config.department_overrides.get((org_dict["name"], department))
             if override:
                 org_dict = synthetic_org(override["organization"])
             else:
@@ -206,7 +170,7 @@ def add_employments(g, person_uri, activities):
                 # colleague exactly what to add rather than leaving them
                 # to guess.
                 known_departments = sorted({
-                    dept for (name, dept) in DEPARTMENT_OVERRIDES if name == org_dict["name"] and dept
+                    dept for (name, dept) in config.department_overrides if name == org_dict["name"] and dept
                 })
                 if known_departments:
                     g.add((role_uri, INTERNAL.reportReason, Literal(
@@ -215,16 +179,16 @@ def add_employments(g, person_uri, activities):
                         "add that as the department on this entry in ORCID to resolve it automatically."
                     )))
 
-            org = add_organization(g, org_dict)
+            org = add_organization(g, org_dict, config)
             g.add((role_uri, SDO.worksFor, org))
             g.add((person_uri, SDO.worksFor, role_uri))
 
             if override and override.get("parent_organization"):
-                parent = add_organization(g, synthetic_org(override["parent_organization"]))
+                parent = add_organization(g, synthetic_org(override["parent_organization"]), config)
                 g.add((org, SDO.parentOrganization, parent))
 
 
-def add_works(g, person_uri, activities):
+def add_works(g: Graph, person_uri: URIRef, activities: dict) -> None:
     for group in (activities.get("works") or {}).get("group", []):
         for s in group["work-summary"]:
             doi = external_id(s, "doi")
@@ -250,7 +214,7 @@ def add_works(g, person_uri, activities):
             g.add((work_uri, SDO.creator, person_uri))
 
 
-def add_fundings(g, person_uri, activities):
+def add_fundings(g: Graph, person_uri: URIRef, activities: dict, config: OrgConfig) -> None:
     for group in (activities.get("fundings") or {}).get("group", []):
         for s in group["funding-summary"]:
             grant_uri = activity_uri(s)
@@ -261,7 +225,7 @@ def add_fundings(g, person_uri, activities):
                 g.add((grant_uri, SDO.name, Literal(title)))
 
             if s.get("organization"):
-                funder = add_organization(g, s["organization"])
+                funder = add_organization(g, s["organization"], config)
                 g.add((grant_uri, SDO.funder, funder))
 
             # schema.org has no dedicated "recipient" property on Grant;
@@ -274,7 +238,7 @@ def add_fundings(g, person_uri, activities):
                 g.add((grant_uri, SDO.identifier, Literal(grant_number)))
 
 
-def add_person(g, orcid_id, record):
+def add_person(g: Graph, orcid_id: str, record: dict, config: OrgConfig) -> URIRef:
     person_uri = URIRef(f"https://orcid.org/{orcid_id}")
     g.add((person_uri, RDF.type, SDO.Person))
 
@@ -289,69 +253,8 @@ def add_person(g, orcid_id, record):
         g.add((person_uri, SDO.name, Literal(" ".join(p for p in (given, family) if p))))
 
     activities = record.get("activities-summary", {})
-    add_employments(g, person_uri, activities)
+    add_employments(g, person_uri, activities, config)
     add_works(g, person_uri, activities)
-    add_fundings(g, person_uri, activities)
+    add_fundings(g, person_uri, activities, config)
 
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--refresh", action="store_true", help="bypass the local ORCID response cache")
-    parser.add_argument(
-        "--data-dir",
-        help="where colleagues.yaml lives and outputs are written "
-             "(default: $COLLEAGUE_GRAPH_DATA_DIR or ~/knaw-iisg-orcid-data)",
-    )
-    args = parser.parse_args()
-
-    data_dir = resolve_data_dir(args.data_dir)
-    colleagues_file = data_dir / "colleagues.yaml"
-    cache_dir = data_dir / "orcid_cache"
-    output_path = data_dir / "knaw-iisg-orcid.ttl"
-    quality_report_path = data_dir / "knaw-iisg-orcid-issues.md"
-    quality_report_person_dir = data_dir / "knaw-iisg-orcid-issues"
-
-    if not colleagues_file.exists():
-        sys.exit(
-            f"No colleagues.yaml found at {colleagues_file}\n"
-            f"Create it there (one '- orcid: \"0000-...\"' entry per colleague), "
-            f"or pass --data-dir / set $COLLEAGUE_GRAPH_DATA_DIR to point elsewhere."
-        )
-
-    global ORG_ALIASES, DEPARTMENT_OVERRIDES
-    if ORG_ALIASES_FILE.exists():
-        ORG_ALIASES = yaml.safe_load(ORG_ALIASES_FILE.read_text()) or {}
-    if DEPARTMENT_OVERRIDES_FILE.exists():
-        entries = yaml.safe_load(DEPARTMENT_OVERRIDES_FILE.read_text()) or []
-        DEPARTMENT_OVERRIDES = {(e["match_organization"], e["match_department"]): e for e in entries}
-
-    colleagues = yaml.safe_load(colleagues_file.read_text())
-
-    g = Graph()
-    g.bind("sdo", SDO)
-
-    skipped = []
-    for entry in colleagues:
-        orcid_id = entry["orcid"]
-        try:
-            record = fetch_record(orcid_id, cache_dir, force_refresh=args.refresh)
-        except requests.exceptions.RequestException as e:
-            print(f"WARNING: skipping {orcid_id}, fetch failed: {e}", file=sys.stderr)
-            skipped.append(orcid_id)
-            continue
-        add_person(g, orcid_id, record)
-
-    quality_report = apply_quality_gate(g)
-    write_report(quality_report, quality_report_path)
-    write_person_reports(quality_report, quality_report_person_dir)
-
-    g.serialize(destination=str(output_path), format="turtle")
-    print(f"Wrote {len(g)} triples to {output_path}")
-    if quality_report:
-        print(f"{len(quality_report)} entr(ies) failed quality checks - see {quality_report_path}", file=sys.stderr)
-    if skipped:
-        print(f"Skipped {len(skipped)} colleague(s) due to fetch errors: {', '.join(skipped)}", file=sys.stderr)
-
-
-if __name__ == "__main__":
-    main()
+    return person_uri

@@ -1,10 +1,11 @@
-"""
-Thin client for the public ORCID API (no auth needed for public data).
+"""Thin client for the public ORCID API (no auth needed for public data).
 
-Responses are cached to disk under data/orcid_cache/ so re-running the
-graph builder doesn't re-hit ORCID every time. Pass force_refresh=True
-(or --refresh on build_colleague_graph.py) to bypass the cache.
+Responses are cached to disk under <data-dir>/orcid_cache/ so re-running the
+graph builder doesn't re-hit ORCID every time. Pass force_refresh=True (or
+--refresh on the CLI) to bypass the cache.
 """
+from __future__ import annotations
+
 import json
 import time
 from pathlib import Path
@@ -16,7 +17,7 @@ MAX_ATTEMPTS = 3
 RETRY_BACKOFF_SECONDS = 2
 
 
-def fetch_record(orcid_id, cache_dir, force_refresh=False):
+def fetch_record(orcid_id: str, cache_dir: Path, force_refresh: bool = False) -> dict:
     cache_dir = Path(cache_dir)
     cache_path = cache_dir / f"{orcid_id}.json"
 
