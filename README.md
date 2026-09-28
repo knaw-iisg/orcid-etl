@@ -1,15 +1,16 @@
 # orcid-etl
 
-One of five KNAW/IISG ETL pipelines producing [NDE Schema.org Application
+One of six KNAW/IISG ETL pipelines producing [NDE Schema.org Application
 Profile](https://docs.nde.nl/schema-profile/)-conformant RDF, alongside
 [biblio-etl](https://github.com/knaw-iisg/biblio-etl),
 [archive-etl](https://github.com/knaw-iisg/archive-etl),
-[findingaid-etl](https://github.com/knaw-iisg/findingaid-etl) and
-[authorities-etl](https://github.com/knaw-iisg/authorities-etl). Builds an
+[findingaid-etl](https://github.com/knaw-iisg/findingaid-etl),
+[authorities-etl](https://github.com/knaw-iisg/authorities-etl) and
+[dataverse-etl](https://github.com/knaw-iisg/dataverse-etl). Builds an
 RDF graph (schema.org / `sdo` terms) describing colleagues, sourced from
 their public ORCID records: profile, employment, works, and fundings.
 
-Unlike the other four, this isn't an OAI-PMH harvest of a catalog -- it
+Unlike the other five, this isn't an OAI-PMH harvest of a catalog -- it
 fetches a short, hand-maintained list of colleagues directly from ORCID's
 public API. Every Person/Organization/CreativeWork node is minted at its own
 real, dereferenceable identifier from the start (`orcid.org`, `ror.org`,
@@ -26,10 +27,19 @@ pip install -e .
 
 ## Usage
 
-Colleagues are personally-identifying curation data, not code, so they and
-everything derived from them live outside this repo, in a data directory
-(default `~/orcid-etl-data`; override with `--data-dir` or
-`$ORCID_ETL_DATA_DIR`).
+Unlike the other five pipelines, **there is no `derived/` folder here, and
+that's deliberate, not an oversight.** biblio-etl/archive-etl/findingaid-etl/
+authorities-etl/dataverse-etl all describe already-published institutional
+catalog/archive data; a gitignored `derived/*.nt` sitting in the repo
+directory is a reasonable place for that. This pipeline's output is
+different in kind -- it's real, current colleagues' names, employers, and
+funding, assembled specifically for this purpose -- so colleagues.yaml, the
+ORCID response cache, and every generated `.ttl` all live outside this repo
+entirely, in a data directory (default `~/orcid-etl-data`; override with
+`--data-dir` or `$ORCID_ETL_DATA_DIR`), not merely gitignored inside it.
+That's a stronger boundary than `.gitignore` provides: nothing about this
+data's location depends on a gitignore rule being present, correct, or
+respected by every tool that ever touches this checkout.
 
 Add colleagues by ORCID iD to `<data-dir>/colleagues.yaml`:
 
