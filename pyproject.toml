@@ -8,6 +8,7 @@ dependencies = [
     "requests>=2.31",
     "pyyaml>=6.0",
     "pyshacl>=0.25",
+    "beautifulsoup4>=4.12",
 ]
 
 [project.optional-dependencies]

@@ -68,6 +68,41 @@ ORCID response cache in `<data-dir>/orcid_cache/` and re-fetch fresh data, or
 a local triplestore's `sources/` directory, without moving any
 personally-identifying curation data out of `--data-dir`.
 
+## Discovering new colleagues
+
+`colleagues.yaml` is hand-maintained, not harvested — someone has to notice a
+new ORCID and add it. To help with that:
+
+```
+python3 -m orcid_etl.discover_cli
+```
+
+A candidate qualifies when **both** of these hold:
+
+1. Their full public ORCID record mentions "International Institute of
+   Social History" or "Internationaal Instituut voor Sociale Geschiedenis"
+   (any case, anywhere — typically an affiliation's organization name), **or**
+   contains a URL on the `iisg.amsterdam` domain (an employment entry's own
+   optional URL is often a staff bio page).
+2. Their ORCID name matches someone's name on
+   [iisg.amsterdam/en/about/staff](https://iisg.amsterdam/en/about/staff).
+
+(Finding candidates to check in the first place uses a broader ORCID search
+across spelling variants including "IISH" — that search is just for recall;
+it's rule 1 above, checked against each candidate's full record, that
+actually decides.)
+
+Writes `<data-dir>/orcid-etl-candidates.md` — a reviewable shortlist, each
+entry naming which of the two rule-1 conditions matched. It never edits
+`colleagues.yaml` itself: a match here is a suggestion, not a resolution
+(common names still produce false positives — "partial" confidence means
+the name match wasn't exact, e.g. a dropped middle name), so add the
+`- orcid: "..."` line by hand once you've checked the profile is really
+that person. Safe to re-run daily (e.g. via cron) — each run just
+regenerates the report from current state, so yesterday's already-reviewed
+suggestions reappear until you either add them to `colleagues.yaml` or they
+stop matching.
+
 ## NDE-AP compliance
 
 Every colleague's Person node gets `sdo:isPartOf` a minimal `sdo:Dataset`
