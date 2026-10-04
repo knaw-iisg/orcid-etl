@@ -77,7 +77,29 @@ SYNTHETIC_RECORD = {
                             },
                         }
                     ]
-                }
+                },
+                {
+                    "work-summary": [
+                        {
+                            "path": f"/{FAKE_ORCID}/work/2",
+                            "type": "conference-presentation",
+                            "title": {"title": {"value": "A Synthetic Talk About Synthetic Things"}},
+                            "publication-date": None,
+                            "external-ids": None,
+                        }
+                    ]
+                },
+                {
+                    "work-summary": [
+                        {
+                            "path": f"/{FAKE_ORCID}/work/3",
+                            "type": "data-set",
+                            "title": {"title": {"value": "A Synthetic Dataset of Synthetic Things"}},
+                            "publication-date": None,
+                            "external-ids": None,
+                        }
+                    ]
+                },
             ]
         },
         "fundings": {
@@ -156,6 +178,21 @@ def test_work_uses_doi_as_its_own_uri():
     journal = next(g.objects(work, SDO.isPartOf))
     assert (journal, RDF.type, SDO.Periodical) in g
     assert str(next(g.objects(journal, SDO.name))) == "Journal of Fabricated Examples"
+
+
+def test_presentation_type_work():
+    g, person_uri = _build()
+    work = URIRef(f"https://orcid.org/{FAKE_ORCID}/work/2")
+    assert (work, RDF.type, SDO.PresentationDigitalDocument) in g
+    assert str(next(g.objects(work, SDO.name))) == "A Synthetic Talk About Synthetic Things"
+    assert (work, SDO.creator, person_uri) in g
+
+
+def test_dataset_type_work():
+    g, person_uri = _build()
+    work = URIRef(f"https://orcid.org/{FAKE_ORCID}/work/3")
+    assert (work, RDF.type, SDO.Dataset) in g
+    assert (work, SDO.creator, person_uri) in g
 
 
 def test_funding():

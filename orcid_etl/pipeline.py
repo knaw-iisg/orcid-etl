@@ -20,18 +20,29 @@ from rdflib.namespace import RDF, XSD
 from .prefixes import INTERNAL, LOCAL_ORG, LOCAL_PERIODICAL, SDO
 
 # ORCID work "type" -> closest schema.org type. Anything not listed here
-# falls back to the generic sdo:CreativeWork.
+# falls back to the generic sdo:CreativeWork. Values are ORCID's actual
+# wire values (e.g. "data-set", not "dataset" -- that key never matched
+# anything until fixed here, silently dropping every dataset work to the
+# generic fallback).
 WORK_TYPE_MAP = {
     "journal-article": SDO.ScholarlyArticle,
     "book": SDO.Book,
     "book-chapter": SDO.Chapter,
     "dissertation-thesis": SDO.Thesis,
-    "dataset": SDO.Dataset,
+    "data-set": SDO.Dataset,
     "report": SDO.Report,
     "conference-paper": SDO.ScholarlyArticle,
     "conference-abstract": SDO.ScholarlyArticle,
     "preprint": SDO.ScholarlyArticle,
     "working-paper": SDO.ScholarlyArticle,
+    # Presentations: distinct from conference-paper (a written paper) in
+    # ORCID's own type system -- the talk/slides/poster itself, not a text.
+    # schema.org has no dedicated "Presentation" class; PresentationDigitalDocument
+    # ("a file containing slides or used for a presentation") is the closest fit.
+    "conference-presentation": SDO.PresentationDigitalDocument,
+    "lecture-speech": SDO.PresentationDigitalDocument,
+    "conference-poster": SDO.PresentationDigitalDocument,
+    "conference-output": SDO.PresentationDigitalDocument,
 }
 
 
