@@ -107,6 +107,7 @@ def main(argv: list[str] | None = None) -> int:
 
     new_members = staff_monitor.find_new_staff(current_staff, previous_names, colleagues)
     new_staff_results = [staff_monitor.check_new_staff_orcid(m, cache_dir) for m in new_members]
+    new_staff_results = staff_monitor.filter_known_orcids(new_staff_results, colleagues)
     added, needs_review = staff_monitor.select_auto_add_candidates(new_staff_results)
 
     if added:

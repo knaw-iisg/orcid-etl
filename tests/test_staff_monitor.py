@@ -6,6 +6,7 @@ from orcid_etl.discover import StaffMember
 from orcid_etl.staff_monitor import (
     NewStaffResult,
     build_report,
+    filter_known_orcids,
     find_departed,
     find_new_staff,
     is_scrape_anomaly,
@@ -89,6 +90,29 @@ def test_select_auto_add_skips_unconfirmed_match():
     added, needs_review = select_auto_add_candidates([result])
     assert added == []
     assert needs_review == [result]
+
+
+def test_filter_known_orcids_drops_already_present_orcid():
+    # Reproduces the Richard Zijdeman bug: an orcid already in colleagues.yaml
+    # under an entry with no staff_name (predates staff_name tracking) must
+    # still be excluded, even though find_new_staff's name-based dedup can't
+    # see it.
+    result = _result("Richard Zijdeman", [
+        {"orcid_id": "0000-0003-3902-3720", "candidate_name": "Richard Zijdeman", "confidence": "exact", "iisg_confirmed": True},
+    ])
+    colleagues = [{"orcid": "0000-0003-3902-3720"}]  # no staff_name, like the project's own placeholder entry
+    filtered = filter_known_orcids([result], colleagues)
+    assert filtered == []
+
+
+def test_filter_known_orcids_keeps_unrelated_candidate():
+    result = _result("Brand New Person", [
+        {"orcid_id": "0000-0000-0000-0099", "candidate_name": "Brand New Person", "confidence": "exact", "iisg_confirmed": True},
+    ])
+    colleagues = [{"orcid": "0000-0003-3902-3720"}]
+    filtered = filter_known_orcids([result], colleagues)
+    assert len(filtered) == 1
+    assert filtered[0].orcid_matches[0]["orcid_id"] == "0000-0000-0000-0099"
 
 
 def test_select_auto_add_skips_ambiguous_multiple_confirmed_matches():

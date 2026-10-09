@@ -96,6 +96,21 @@ def check_new_staff_orcid(member: StaffMember, cache_dir) -> NewStaffResult:
     return NewStaffResult(staff_member=member, orcid_matches=tuple(matches))
 
 
+def filter_known_orcids(results: list[NewStaffResult], colleagues: list[dict]) -> list[NewStaffResult]:
+    """Drops any ORCID candidate already present in colleagues.yaml by
+    orcid id -- covers entries that predate staff_name tracking (like this
+    project's own original placeholder entry), which find_new_staff's
+    name-based dedup can't see on its own. A result left with no
+    candidates at all is dropped entirely: nothing new happened for them."""
+    known_orcids = {e["orcid"] for e in colleagues}
+    filtered = []
+    for result in results:
+        remaining = tuple(m for m in result.orcid_matches if m["orcid_id"] not in known_orcids)
+        if remaining:
+            filtered.append(NewStaffResult(staff_member=result.staff_member, orcid_matches=remaining))
+    return filtered
+
+
 def select_auto_add_candidates(results: list[NewStaffResult]) -> tuple[list[tuple[StaffMember, dict]], list[NewStaffResult]]:
     """Splits new-staff results into (auto_add, needs_review).
 
