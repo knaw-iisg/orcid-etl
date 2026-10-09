@@ -112,22 +112,28 @@ def filter_known_orcids(results: list[NewStaffResult], colleagues: list[dict]) -
 
 
 def select_auto_add_candidates(results: list[NewStaffResult]) -> tuple[list[tuple[StaffMember, dict]], list[NewStaffResult]]:
-    """Splits new-staff results into (auto_add, needs_review).
+    """Splits new-staff results into (auto_add, needs_review); anything not
+    in either (no confirmed candidate at all -- the common-name noise, e.g.
+    dozens of unconfirmed candidates for a generic name) is dropped from
+    both, and from the report, entirely.
 
-    Auto-add iff: on the staff page (true by construction -- these are all
-    new_staff_results) AND a name match (exact or partial) AND that
-    specific candidate's ORCID record confirms IISG affiliation. If more
-    than one candidate for the same person clears that bar, it's ambiguous
-    (which real ORCID is this person's?) -- flagged for review rather than
-    guessing."""
+    - Auto-add iff exactly one of this person's ORCID candidates confirms
+      IISG affiliation AND their name matched the staff page exactly.
+    - Needs review iff exactly one candidate is confirmed but the name
+      match was only partial (e.g. ORCID carries an extra middle/maiden
+      name the staff page doesn't show) -- confirmed affiliation plus an
+      inexact name is worth a human glance before publishing, unlike an
+      exact name match. Also needs review if *multiple* candidates for the
+      same person are confirmed (which one is really them?) -- flagged
+      rather than guessed at, regardless of confidence."""
     auto_add = []
     needs_review = []
     for result in results:
         confirmed = result.confirmed_matches
-        if len(confirmed) == 1:
+        if len(confirmed) == 1 and confirmed[0]["confidence"] == "exact":
             auto_add.append((result.staff_member, confirmed[0]))
-        else:
-            needs_review.append(result)
+        elif confirmed:
+            needs_review.append(NewStaffResult(staff_member=result.staff_member, orcid_matches=confirmed))
     return auto_add, needs_review
 
 
@@ -146,29 +152,26 @@ def build_report(
                    "to avoid treating a broken scrape as a mass staff exodus. "
                    "No colleagues.yaml changes were made.", ""]
 
-    lines.append("## Added to colleagues.yaml (staff-page name match + IISG affiliation confirmed on ORCID)")
+    lines.append("## Added to colleagues.yaml (exact staff-page name match + IISG affiliation confirmed on ORCID)")
     if not added:
         lines.append("None.")
     else:
         for member, match in added:
-            lines.append(f"- **{member.name}** -- https://orcid.org/{match['orcid_id']} ({match['confidence']} name match)")
+            lines.append(f"- **{member.name}** -- https://orcid.org/{match['orcid_id']}")
     lines.append("")
 
-    lines.append("## New staff needing manual review (no confirmed single match)")
+    lines.append(
+        "## Needs manual review (IISG affiliation confirmed on ORCID, but name match "
+        "is only partial, or more than one candidate matched)"
+    )
     if not needs_review:
         lines.append("None.")
     else:
         for result in needs_review:
             m = result.staff_member
             lines.append(f"- **{m.name}** ({m.role or 'role not listed'})")
-            if not result.orcid_matches:
-                lines.append("  - no public ORCID profile found by name search")
             for match in result.orcid_matches:
-                status = "IISG affiliation confirmed" if match["iisg_confirmed"] else "affiliation not yet confirmed on ORCID"
-                lines.append(
-                    f"  - https://orcid.org/{match['orcid_id']} ({match['confidence']} name match, {status})"
-                    f" -- not added, review by hand"
-                )
+                lines.append(f"  - https://orcid.org/{match['orcid_id']} ({match['confidence']} name match) -- not added, review by hand")
     lines.append("")
 
     lines.append("## Departed (removed from colleagues.yaml)")

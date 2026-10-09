@@ -108,10 +108,15 @@ by name (catches someone who joined recently and hasn't put IISG into their
 ORCID profile's affiliation field yet, which `discover_cli`'s
 affiliation-text search would miss). **Auto-adds** to `colleagues.yaml`
 when exactly one ORCID candidate for that name satisfies the rule above
-(logged to `<data-dir>/orcid-etl-additions.log`); if a name has zero or
-multiple qualifying candidates, it's left in
-`<data-dir>/staff-monitor-report.md` for manual review instead of guessing.
-Also auto-removes any existing `colleagues.yaml` entry whose `staff_name`
+AND the name match was exact (logged to
+`<data-dir>/orcid-etl-additions.log`). If the only qualifying candidate's
+name match was partial (e.g. ORCID carries a middle/maiden name the staff
+page doesn't show), or more than one candidate qualifies, it's left in
+`<data-dir>/staff-monitor-report.md` for manual review instead of being
+added or guessed at. Anyone with no qualifying candidate at all -- the
+common-name noise, e.g. dozens of unconfirmed ORCID profiles for a generic
+name -- doesn't appear in the report at all. Also auto-removes any
+existing `colleagues.yaml` entry whose `staff_name`
 no longer appears on the staff page (logged first to
 `<data-dir>/orcid-etl-removals.log`, so a mistake is revertable) -- unless
 the staff page itself looks broken (its entry count dropped by more than

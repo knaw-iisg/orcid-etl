@@ -83,13 +83,28 @@ def test_select_auto_add_on_single_confirmed_match():
     assert needs_review == []
 
 
-def test_select_auto_add_skips_unconfirmed_match():
+def test_select_auto_add_drops_unconfirmed_match_entirely():
+    # No confirmed candidate at all -- this is the common-name noise case
+    # (e.g. dozens of unconfirmed candidates for a generic name) and should
+    # not appear in the report at all, not even under "needs review".
     result = _result("New Person", [
         {"orcid_id": "0000-0000-0000-0009", "candidate_name": "New Person", "confidence": "exact", "iisg_confirmed": False},
     ])
     added, needs_review = select_auto_add_candidates([result])
     assert added == []
-    assert needs_review == [result]
+    assert needs_review == []
+
+
+def test_select_auto_add_sends_single_partial_confirmed_to_review():
+    # Confirmed affiliation, but the name match was only partial (e.g. a
+    # dropped middle/maiden name) -- worth a human glance, not auto-added.
+    result = _result("New Person", [
+        {"orcid_id": "0000-0000-0000-0005", "candidate_name": "New Person Extra", "confidence": "partial", "iisg_confirmed": True},
+    ])
+    added, needs_review = select_auto_add_candidates([result])
+    assert added == []
+    assert len(needs_review) == 1
+    assert needs_review[0].orcid_matches[0]["orcid_id"] == "0000-0000-0000-0005"
 
 
 def test_filter_known_orcids_drops_already_present_orcid():
