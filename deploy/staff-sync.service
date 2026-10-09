@@ -1,0 +1,12 @@
+[Unit]
+Description=Daily IISG staff page / ORCID discovery + monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=silk
+Group=silk
+WorkingDirectory=/home/silk/pipelines/orcid-etl
+ExecStart=/home/silk/pipelines/orcid-etl/deploy/staff-sync.sh
+TimeoutStartSec=20min

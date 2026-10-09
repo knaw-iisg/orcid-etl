@@ -55,6 +55,11 @@ AFFILIATION_PHRASES = (
     "international institute of social history",
     "internationaal instituut voor sociale geschiedenis",
 )
+# ... or one of these abbreviations as a whole word (word-boundaried,
+# unlike AFFILIATION_PHRASES above, since "iisg"/"iish" are short enough
+# that an unanchored substring check could false-positive inside an
+# unrelated word) ...
+AFFILIATION_ABBREVIATIONS = ("iish", "iisg")
 # ... or contains a URL on this domain (anywhere).
 IISG_URL_DOMAIN = "iisg.amsterdam"
 
@@ -99,37 +104,48 @@ def parse_staff_page(html: str) -> list[StaffMember]:
     return members
 
 
+def _run_orcid_search(query: str) -> dict[str, OrcidCandidate]:
+    candidates: dict[str, OrcidCandidate] = {}
+    start = 0
+    while True:
+        response = requests.get(
+            ORCID_SEARCH_API,
+            params={"q": query, "start": start, "rows": ORCID_SEARCH_ROWS},
+            headers={"Accept": "application/json"},
+            timeout=30,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        for result in payload.get("expanded-result") or []:
+            orcid_id = result["orcid-id"]
+            candidates[orcid_id] = OrcidCandidate(
+                orcid_id=orcid_id,
+                given_names=result.get("given-names") or "",
+                family_names=result.get("family-names") or "",
+                institution_names=tuple(result.get("institution-name") or ()),
+            )
+        start += ORCID_SEARCH_ROWS
+        if start >= (payload.get("num-found") or 0):
+            break
+    return candidates
+
+
 def fetch_orcid_candidates(
     institution_names: tuple[str, ...] = INSTITUTION_NAME_VARIANTS,
 ) -> dict[str, OrcidCandidate]:
     candidates: dict[str, OrcidCandidate] = {}
     for institution_name in institution_names:
-        start = 0
-        while True:
-            response = requests.get(
-                ORCID_SEARCH_API,
-                params={
-                    "q": f'affiliation-org-name:"{institution_name}"',
-                    "start": start,
-                    "rows": ORCID_SEARCH_ROWS,
-                },
-                headers={"Accept": "application/json"},
-                timeout=30,
-            )
-            response.raise_for_status()
-            payload = response.json()
-            for result in payload.get("expanded-result") or []:
-                orcid_id = result["orcid-id"]
-                candidates[orcid_id] = OrcidCandidate(
-                    orcid_id=orcid_id,
-                    given_names=result.get("given-names") or "",
-                    family_names=result.get("family-names") or "",
-                    institution_names=tuple(result.get("institution-name") or ()),
-                )
-            start += ORCID_SEARCH_ROWS
-            if start >= (payload.get("num-found") or 0):
-                break
+        candidates.update(_run_orcid_search(f'affiliation-org-name:"{institution_name}"'))
     return candidates
+
+
+def search_orcid_candidates_by_name(full_name: str) -> dict[str, OrcidCandidate]:
+    """Unqualified phrase search across ORCID's default indexed fields, by
+    full name rather than institution affiliation -- for staff_monitor to
+    check brand-new staff who likely haven't put IISG into their ORCID
+    profile yet (fetch_orcid_candidates above would miss them for exactly
+    that reason)."""
+    return _run_orcid_search(f'"{full_name}"')
 
 
 def normalize_name(name: str) -> str:
@@ -138,7 +154,7 @@ def normalize_name(name: str) -> str:
     return re.sub(r"[^a-z]+", " ", without_accents.lower()).strip()
 
 
-def _name_tokens(name: str) -> frozenset[str]:
+def name_tokens(name: str) -> frozenset[str]:
     """Normalized tokens, dropping single-letter ones. ORCID given-names
     routinely carry middle initials ("Marco H.D.") that the staff page's
     plain "Marco van Leeuwen" doesn't -- without this, that counts as a
@@ -155,12 +171,12 @@ def match_staff_to_candidates(
     -- this is a shortlist for a human to verify, not a resolver."""
     matches = []
     for member in staff:
-        member_tokens = _name_tokens(member.name)
+        member_tokens = name_tokens(member.name)
         if len(member_tokens) < 2:
             continue
         for candidate in candidates.values():
             candidate_name = f"{candidate.given_names} {candidate.family_names}".strip()
-            candidate_tokens = _name_tokens(candidate_name)
+            candidate_tokens = name_tokens(candidate_name)
             if len(candidate_tokens) < 2:
                 continue
 
@@ -186,15 +202,19 @@ def match_staff_to_candidates(
 
 def match_reason(record: dict) -> str | None:
     """The rule: does this full ORCID record (see harvest.fetch_record)
-    mention IISG by name, or carry a URL on its domain? Checking the whole
-    serialized record rather than picking out specific fields means it
-    doesn't matter whether the mention is in an employment's organization
-    name, a department name, or that employment's own optional URL -- any
-    of those, or a researcher-url, satisfy the same rule."""
+    mention IISG by name or abbreviation, or carry a URL on its domain?
+    Checking the whole serialized record rather than picking out specific
+    fields means it doesn't matter whether the mention is in an
+    employment's organization name, a department name, or that
+    employment's own optional URL -- any of those, or a researcher-url,
+    satisfy the same rule."""
     text = json.dumps(record).lower()
     for phrase in AFFILIATION_PHRASES:
         if phrase in text:
             return f'mentions "{phrase}"'
+    for abbreviation in AFFILIATION_ABBREVIATIONS:
+        if re.search(rf"\b{abbreviation}\b", text):
+            return f'mentions "{abbreviation}"'
     if IISG_URL_DOMAIN in text:
         return f"a URL on the profile points to {IISG_URL_DOMAIN}"
     return None

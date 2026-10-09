@@ -129,15 +129,33 @@ def test_match_reason_on_dutch_affiliation_name():
 
 
 def test_match_reason_on_employment_url_only():
-    # organization name alone (e.g. "IISG") wouldn't satisfy the rule --
-    # it's the employment's own url, pointing at the staff bio page, that does.
+    # "iisg.amsterdam" itself contains the word-bounded token "iisg", so this
+    # is caught by the abbreviation check before IISG_URL_DOMAIN is ever
+    # consulted -- the dedicated domain check only matters for a URL whose
+    # domain doesn't literally spell out "iisg"/"iish", which doesn't apply
+    # to this institute's actual domain.
     record = {"activities-summary": {"employments": {"affiliation-group": [
         {"summaries": [{"employment-summary": {
-            "organization": {"name": "IISG"},
+            "organization": {"name": "Some Other Org"},
             "url": {"value": "https://iisg.amsterdam/en/about/staff/marco-van-leeuwen"},
         }}]}
     ]}}}
-    assert match_reason(record) == "a URL on the profile points to iisg.amsterdam"
+    assert match_reason(record) == 'mentions "iisg"'
+
+
+def test_match_reason_on_bare_abbreviation():
+    record = {"activities-summary": {"employments": {"affiliation-group": [
+        {"summaries": [{"employment-summary": {"organization": {"name": "IISG"}}}]}
+    ]}}}
+    assert match_reason(record) == 'mentions "iisg"'
+
+
+def test_match_reason_abbreviation_is_word_boundaried():
+    # "iisg"/"iish" inside a longer word shouldn't count as a mention.
+    record = {"activities-summary": {"employments": {"affiliation-group": [
+        {"summaries": [{"employment-summary": {"organization": {"name": "Friisgaard University"}}}]}
+    ]}}}
+    assert match_reason(record) is None
 
 
 def test_match_reason_none_when_no_mention():

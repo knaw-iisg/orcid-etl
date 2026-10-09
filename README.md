@@ -70,38 +70,57 @@ personally-identifying curation data out of `--data-dir`.
 
 ## Discovering new colleagues
 
-`colleagues.yaml` is hand-maintained, not harvested — someone has to notice a
-new ORCID and add it. To help with that:
+A candidate qualifies when **both** of these hold:
+
+1. Their full public ORCID record mentions "International Institute of
+   Social History", "Internationaal Instituut voor Sociale Geschiedenis",
+   or the bare abbreviation "IISH"/"IISG" (any case, word-boundaried,
+   anywhere -- typically an affiliation's organization name), **or**
+   contains a URL on the `iisg.amsterdam` domain (an employment entry's own
+   optional URL is often a staff bio page).
+2. Their ORCID name matches (exactly, or a subset -- e.g. a dropped middle
+   name) someone's name on
+   [iisg.amsterdam/en/about/staff](https://iisg.amsterdam/en/about/staff).
+
+Two tools apply this rule, deliberately differently:
 
 ```
 python3 -m orcid_etl.discover_cli
 ```
 
-A candidate qualifies when **both** of these hold:
+Broad recall: searches ORCID for anyone whose own affiliation text names
+the institute (any spelling variant, including "IISH"), matches that
+against the staff page, then applies the rule above. Writes
+`<data-dir>/orcid-etl-candidates.md` -- a reviewable shortlist, never edits
+`colleagues.yaml`. Common names still produce false positives even at
+"exact" name-match confidence, so this stays a human-reviewed suggestion,
+not a resolution: add the `- orcid: "..."` line by hand once you've
+checked the profile is really that person.
 
-1. Their full public ORCID record mentions "International Institute of
-   Social History" or "Internationaal Instituut voor Sociale Geschiedenis"
-   (any case, anywhere — typically an affiliation's organization name), **or**
-   contains a URL on the `iisg.amsterdam` domain (an employment entry's own
-   optional URL is often a staff bio page).
-2. Their ORCID name matches someone's name on
-   [iisg.amsterdam/en/about/staff](https://iisg.amsterdam/en/about/staff).
+```
+python3 -m orcid_etl.staff_monitor_cli
+```
 
-(Finding candidates to check in the first place uses a broader ORCID search
-across spelling variants including "IISH" — that search is just for recall;
-it's rule 1 above, checked against each candidate's full record, that
-actually decides.)
+The daily job (see `deploy/staff-sync.timer`): diffs the staff page against
+yesterday's snapshot and against `colleagues.yaml` to find people who are
+either brand new or who just hadn't been reviewed yet, then searches ORCID
+by name (catches someone who joined recently and hasn't put IISG into their
+ORCID profile's affiliation field yet, which `discover_cli`'s
+affiliation-text search would miss). **Auto-adds** to `colleagues.yaml`
+when exactly one ORCID candidate for that name satisfies the rule above
+(logged to `<data-dir>/orcid-etl-additions.log`); if a name has zero or
+multiple qualifying candidates, it's left in
+`<data-dir>/staff-monitor-report.md` for manual review instead of guessing.
+Also auto-removes any existing `colleagues.yaml` entry whose `staff_name`
+no longer appears on the staff page (logged first to
+`<data-dir>/orcid-etl-removals.log`, so a mistake is revertable) -- unless
+the staff page itself looks broken (its entry count dropped by more than
+half since yesterday), in which case no removals happen that run and the
+report says why.
 
-Writes `<data-dir>/orcid-etl-candidates.md` — a reviewable shortlist, each
-entry naming which of the two rule-1 conditions matched. It never edits
-`colleagues.yaml` itself: a match here is a suggestion, not a resolution
-(common names still produce false positives — "partial" confidence means
-the name match wasn't exact, e.g. a dropped middle name), so add the
-`- orcid: "..."` line by hand once you've checked the profile is really
-that person. Safe to re-run daily (e.g. via cron) — each run just
-regenerates the report from current state, so yesterday's already-reviewed
-suggestions reappear until you either add them to `colleagues.yaml` or they
-stop matching.
+Both are safe to re-run daily; `staff_monitor_cli`'s own day-to-day state
+(yesterday's staff names, for diffing) lives in
+`<data-dir>/staff_monitor_state.yaml`.
 
 ## NDE-AP compliance
 

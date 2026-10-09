@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the IISG staff / ORCID sync daily, before the nightly ETL harvest
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+RandomizedDelaySec=300
+Persistent=true
+
+[Install]
+WantedBy=timers.target
