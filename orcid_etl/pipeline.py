@@ -72,6 +72,23 @@ def external_id(summary: dict, id_type: str) -> str | None:
     return None
 
 
+_DOI_NOISE_PREFIX_RE = re.compile(r"^\s*(?:doi\s*:?\s*|https?://(?:dx\.)?doi\.org/)+", re.IGNORECASE)
+_DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$")
+
+
+def clean_doi(raw: str) -> str | None:
+    """ORCID's "doi" external-id is free text a colleague typed into their
+    own profile, not a validated field -- seen in the wild: a leading
+    "Doi "/"DOI: " label, a full doi.org/dx.doi.org URL instead of a bare
+    DOI, stray whitespace, or (rarely) an entire pasted citation that isn't
+    a DOI at all. The first three are noise around a real DOI and get
+    stripped; anything that still doesn't look like a real DOI afterwards
+    returns None, so the caller falls back to the work's own ORCID
+    permalink instead of minting an IRI rdflib can't serialize."""
+    candidate = _DOI_NOISE_PREFIX_RE.sub("", raw.strip()).strip().rstrip(".")
+    return candidate if _DOI_RE.match(candidate) else None
+
+
 def activity_uri(summary: dict) -> URIRef:
     """ORCID includes a stable permalink path on every activity summary
     (e.g. /0000-.../employment/25933636) - reuse it as the node's IRI."""
@@ -202,7 +219,7 @@ def add_employments(g: Graph, person_uri: URIRef, activities: dict, config: OrgC
 def add_works(g: Graph, person_uri: URIRef, activities: dict) -> None:
     for group in (activities.get("works") or {}).get("group", []):
         for s in group["work-summary"]:
-            doi = external_id(s, "doi")
+            doi = clean_doi(external_id(s, "doi") or "")
             work_uri = URIRef(f"https://doi.org/{doi}") if doi else activity_uri(s)
             sdo_type = WORK_TYPE_MAP.get(s.get("type"), SDO.CreativeWork)
             g.add((work_uri, RDF.type, sdo_type))

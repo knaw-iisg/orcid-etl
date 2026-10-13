@@ -7,7 +7,7 @@ from rdflib import RDF, Graph, URIRef
 from rdflib.namespace import XSD
 
 from orcid_etl import nde_ap
-from orcid_etl.pipeline import OrgConfig, add_person
+from orcid_etl.pipeline import OrgConfig, add_person, clean_doi
 from orcid_etl.prefixes import SDO
 
 FAKE_ORCID = "0000-0000-0000-0001"
@@ -178,6 +178,35 @@ def test_work_uses_doi_as_its_own_uri():
     journal = next(g.objects(work, SDO.isPartOf))
     assert (journal, RDF.type, SDO.Periodical) in g
     assert str(next(g.objects(journal, SDO.name))) == "Journal of Fabricated Examples"
+
+
+def test_clean_doi_passes_through_a_clean_doi():
+    assert clean_doi("10.1234/example.doi") == "10.1234/example.doi"
+
+
+def test_clean_doi_strips_leading_whitespace_and_stray_url():
+    # Actual value seen in the wild on a real colleague's ORCID profile.
+    assert clean_doi(" http://dx.doi.org/10.1080/2049677X.2017.1314602") == "10.1080/2049677X.2017.1314602"
+
+
+def test_clean_doi_strips_trailing_whitespace():
+    assert clean_doi("10.1080/0144039X.2021.2008721 ") == "10.1080/0144039X.2021.2008721"
+
+
+def test_clean_doi_strips_doi_label_prefix():
+    assert clean_doi("Doi 10.1017/S002085901300062x") == "10.1017/S002085901300062x"
+
+
+def test_clean_doi_strips_doi_colon_label_and_trailing_period():
+    assert clean_doi("DOI: 10.29388/978-85-53111-03-9.") == "10.29388/978-85-53111-03-9"
+
+
+def test_clean_doi_rejects_a_pasted_citation():
+    citation = (
+        "VARELA, Raquel Cardeira - Hist\\'oria da pol\\'itica do Partido "
+        "Comunista Portugu\\^es. Lisboa: ISCTE-IUL, 2010."
+    )
+    assert clean_doi(citation) is None
 
 
 def test_presentation_type_work():
